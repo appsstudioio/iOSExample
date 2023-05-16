@@ -1,0 +1,23 @@
+//
+//  Release.xcconfig
+//  iOSExample
+//
+//  Created by dongju.lim on 2023/02/13.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// App Name
+APP_NAME = iOSExample
+
+//Bundle ID
+PRODUCT_BUNDLE_IDENTIFIER = io.appsstudio.iOSExample
+
+//Base URL
+BASE_URL = https:\/\/appsstudioio.github.io/
+
+// Firebase config file
+FIREBASE_SERVICE_FILE_NAME = GoogleService-Info
+
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE
