@@ -18,10 +18,23 @@ class BaseTabBarController: UITabBarController {
     }
     var preVC: UIViewController?
     
-    var lineView = UIView().then {
-        $0.backgroundColor = .lightText
+    public override var selectedIndex: Int {
+        didSet {
+            self.moveLine()
+        }
     }
-    
+#if DEVELOP
+    var preSelectIndex: Int = 0
+    var lineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.named(.mainColor)
+        view.layer.cornerRadius = 1
+        view.clipsToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = true
+        return view
+    }()
+#endif
+
     override func loadView() {
         super.loadView()
         setTapBarViewControllers()
@@ -30,6 +43,35 @@ class BaseTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+
+    private func moveLine() {
+#if DEVELOP
+       if let tabbarItems = self.tabBar.items {
+           let tabSize = (tabBar.frame.size.width / CGFloat(tabbarItems.count))
+           let tabBarStart = tabBar.frame.origin.x
+
+           if preSelectIndex > self.selectedIndex {
+               // move left
+               self.lineView.layer.moveInAnimation(duration: 0.4,
+                                                   subtype: .fromRight,
+                                                   timingFunction: .default,
+                                                   transitionType: .moveIn)
+           } else if preSelectIndex < self.selectedIndex {
+               // move right
+               self.lineView.layer.moveInAnimation(duration: 0.4,
+                                                   subtype: .fromLeft,
+                                                   timingFunction: .default,
+                                                   transitionType: .moveIn)
+           }
+           preSelectIndex = self.selectedIndex
+
+           // Assume index of tabs starts at 0, then the tab in your pic would be tab 4
+           //   targetX would be the center point of the target tab.
+           let targetX = tabBarStart + (tabSize * CGFloat(self.selectedIndex))
+           self.lineView.frame = CGRect(x: (targetX + 16), y: 0, width: (tabSize - 32), height: 1.5)
+       }
+#endif
     }
 }
 
@@ -48,6 +90,10 @@ extension BaseTabBarController {
 //
 //        let viewControllers = [homeNavigationVC, tmpNvVC, myPageNVVC]
 //        self.setViewControllers(viewControllers, animated: true)
+
+#if DEVELOP
+        self.tabBar.addSubview(lineView)
+#endif
     }
     
     private func setupUI(){
