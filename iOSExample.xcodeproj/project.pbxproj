@@ -12,10 +12,6 @@
 		3E5775F22C72E10A002F5350 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5775EB2C72E10A002F5350 /* SplashView.swift */; };
 		3E5775F32C72E10A002F5350 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5775ED2C72E10A002F5350 /* SplashViewModel.swift */; };
 		3E5775F62C72E19C002F5350 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5775F52C72E19C002F5350 /* BaseViewModel.swift */; };
-		3E5776052C730CC6002F5350 /* TypographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5775FC2C730CC6002F5350 /* TypographyViewController.swift */; };
-		3E5776062C730CC6002F5350 /* TypographyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5775FE2C730CC6002F5350 /* TypographyModel.swift */; };
-		3E5776072C730CC6002F5350 /* TypographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5776002C730CC6002F5350 /* TypographyView.swift */; };
-		3E5776082C730CC6002F5350 /* TypographyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5776022C730CC6002F5350 /* TypographyViewModel.swift */; };
 		3E5776142C730E61002F5350 /* ColorPaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57760B2C730E61002F5350 /* ColorPaletteViewController.swift */; };
 		3E5776152C730E61002F5350 /* ColorPaletteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57760D2C730E61002F5350 /* ColorPaletteModel.swift */; };
 		3E5776162C730E61002F5350 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57760F2C730E61002F5350 /* ColorPaletteView.swift */; };
@@ -25,6 +21,18 @@
 		3E5776202C732034002F5350 /* BaseTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57761F2C732034002F5350 /* BaseTableHeaderView.swift */; };
 		3E5776222C73260A002F5350 /* TypographyLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5776212C73260A002F5350 /* TypographyLabelCell.swift */; };
 		3E5776242C732618002F5350 /* TypographyTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5776232C732618002F5350 /* TypographyTextViewCell.swift */; };
+		3E5776322C73429C002F5350 /* TypographyCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5776292C73429C002F5350 /* TypographyCaseViewController.swift */; };
+		3E5776332C73429C002F5350 /* TypographyCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57762B2C73429C002F5350 /* TypographyCaseModel.swift */; };
+		3E5776342C73429C002F5350 /* TypographyCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57762D2C73429C002F5350 /* TypographyCaseView.swift */; };
+		3E5776352C73429C002F5350 /* TypographyCaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57762F2C73429C002F5350 /* TypographyCaseViewModel.swift */; };
+		3E5776412C7342DE002F5350 /* TypographyLineHeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5776382C7342DE002F5350 /* TypographyLineHeightViewController.swift */; };
+		3E5776422C7342DE002F5350 /* TypographyLineHeightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57763A2C7342DE002F5350 /* TypographyLineHeightModel.swift */; };
+		3E5776432C7342DE002F5350 /* TypographyLineHeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57763C2C7342DE002F5350 /* TypographyLineHeightView.swift */; };
+		3E5776442C7342DE002F5350 /* TypographyLineHeightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57763E2C7342DE002F5350 /* TypographyLineHeightViewModel.swift */; };
+		3E5776502C7343ED002F5350 /* ColorCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5776472C7343ED002F5350 /* ColorCaseViewController.swift */; };
+		3E5776512C7343ED002F5350 /* ColorCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5776492C7343ED002F5350 /* ColorCaseModel.swift */; };
+		3E5776522C7343ED002F5350 /* ColorCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57764B2C7343ED002F5350 /* ColorCaseView.swift */; };
+		3E5776532C7343ED002F5350 /* ColorCaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57764D2C7343ED002F5350 /* ColorCaseViewModel.swift */; };
 		3EB101E62C6C3E5600E151F0 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB101E52C6C3E5600E151F0 /* CommonFunctions.swift */; };
 		3EB101E92C6C3F7B00E151F0 /* CommonUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 3EB101E82C6C3F7B00E151F0 /* CommonUtils */; };
 		3EB101F72C6C8ADD00E151F0 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB101F52C6C8ADD00E151F0 /* AnalyticsManager.swift */; };
@@ -81,10 +89,6 @@
 		3E5775EB2C72E10A002F5350 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3E5775ED2C72E10A002F5350 /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		3E5775F52C72E19C002F5350 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		3E5775FC2C730CC6002F5350 /* TypographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyViewController.swift; sourceTree = "<group>"; };
-		3E5775FE2C730CC6002F5350 /* TypographyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyModel.swift; sourceTree = "<group>"; };
-		3E5776002C730CC6002F5350 /* TypographyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyView.swift; sourceTree = "<group>"; };
-		3E5776022C730CC6002F5350 /* TypographyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyViewModel.swift; sourceTree = "<group>"; };
 		3E57760B2C730E61002F5350 /* ColorPaletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPaletteViewController.swift; sourceTree = "<group>"; };
 		3E57760D2C730E61002F5350 /* ColorPaletteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPaletteModel.swift; sourceTree = "<group>"; };
 		3E57760F2C730E61002F5350 /* ColorPaletteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
@@ -94,6 +98,18 @@
 		3E57761F2C732034002F5350 /* BaseTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableHeaderView.swift; sourceTree = "<group>"; };
 		3E5776212C73260A002F5350 /* TypographyLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyLabelCell.swift; sourceTree = "<group>"; };
 		3E5776232C732618002F5350 /* TypographyTextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyTextViewCell.swift; sourceTree = "<group>"; };
+		3E5776292C73429C002F5350 /* TypographyCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyCaseViewController.swift; sourceTree = "<group>"; };
+		3E57762B2C73429C002F5350 /* TypographyCaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyCaseModel.swift; sourceTree = "<group>"; };
+		3E57762D2C73429C002F5350 /* TypographyCaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyCaseView.swift; sourceTree = "<group>"; };
+		3E57762F2C73429C002F5350 /* TypographyCaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyCaseViewModel.swift; sourceTree = "<group>"; };
+		3E5776382C7342DE002F5350 /* TypographyLineHeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyLineHeightViewController.swift; sourceTree = "<group>"; };
+		3E57763A2C7342DE002F5350 /* TypographyLineHeightModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyLineHeightModel.swift; sourceTree = "<group>"; };
+		3E57763C2C7342DE002F5350 /* TypographyLineHeightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyLineHeightView.swift; sourceTree = "<group>"; };
+		3E57763E2C7342DE002F5350 /* TypographyLineHeightViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyLineHeightViewModel.swift; sourceTree = "<group>"; };
+		3E5776472C7343ED002F5350 /* ColorCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCaseViewController.swift; sourceTree = "<group>"; };
+		3E5776492C7343ED002F5350 /* ColorCaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCaseModel.swift; sourceTree = "<group>"; };
+		3E57764B2C7343ED002F5350 /* ColorCaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCaseView.swift; sourceTree = "<group>"; };
+		3E57764D2C7343ED002F5350 /* ColorCaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCaseViewModel.swift; sourceTree = "<group>"; };
 		3EB101E52C6C3E5600E151F0 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
 		3EB101F52C6C8ADD00E151F0 /* AnalyticsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		3EB101F62C6C8ADD00E151F0 /* CrashlyticsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashlyticsManager.swift; sourceTree = "<group>"; };
@@ -209,49 +225,13 @@
 			path = BaseViewModel;
 			sourceTree = "<group>";
 		};
-		3E5775FD2C730CC6002F5350 /* Controller */ = {
+		3E5776042C730CC6002F5350 /* TypographyTest */ = {
 			isa = PBXGroup;
 			children = (
-				3E5775FC2C730CC6002F5350 /* TypographyViewController.swift */,
+				3E5776402C7342DE002F5350 /* TypographyLineHeight */,
+				3E5776312C73429C002F5350 /* TypographyCase */,
 			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		3E5775FF2C730CC6002F5350 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				3E5775FE2C730CC6002F5350 /* TypographyModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		3E5776012C730CC6002F5350 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3E5776002C730CC6002F5350 /* TypographyView.swift */,
-				3E5776212C73260A002F5350 /* TypographyLabelCell.swift */,
-				3E5776232C732618002F5350 /* TypographyTextViewCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		3E5776032C730CC6002F5350 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				3E5776022C730CC6002F5350 /* TypographyViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		3E5776042C730CC6002F5350 /* Typography */ = {
-			isa = PBXGroup;
-			children = (
-				3E5776032C730CC6002F5350 /* ViewModel */,
-				3E5775FD2C730CC6002F5350 /* Controller */,
-				3E5775FF2C730CC6002F5350 /* Model */,
-				3E5776012C730CC6002F5350 /* View */,
-			);
-			path = Typography;
+			path = TypographyTest;
 			sourceTree = "<group>";
 		};
 		3E57760C2C730E61002F5350 /* Controller */ = {
@@ -303,6 +283,146 @@
 				3E57761F2C732034002F5350 /* BaseTableHeaderView.swift */,
 			);
 			path = BaseViews;
+			sourceTree = "<group>";
+		};
+		3E5776282C734280002F5350 /* ColorTest */ = {
+			isa = PBXGroup;
+			children = (
+				3E57764F2C7343ED002F5350 /* ColorCase */,
+				3E5776132C730E61002F5350 /* ColorPalette */,
+			);
+			path = ColorTest;
+			sourceTree = "<group>";
+		};
+		3E57762A2C73429C002F5350 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E5776292C73429C002F5350 /* TypographyCaseViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3E57762C2C73429C002F5350 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E57762B2C73429C002F5350 /* TypographyCaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E57762E2C73429C002F5350 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E57762D2C73429C002F5350 /* TypographyCaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E5776302C73429C002F5350 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3E57762F2C73429C002F5350 /* TypographyCaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3E5776312C73429C002F5350 /* TypographyCase */ = {
+			isa = PBXGroup;
+			children = (
+				3E5776302C73429C002F5350 /* ViewModel */,
+				3E57762A2C73429C002F5350 /* Controller */,
+				3E57762C2C73429C002F5350 /* Model */,
+				3E57762E2C73429C002F5350 /* View */,
+			);
+			path = TypographyCase;
+			sourceTree = "<group>";
+		};
+		3E5776392C7342DE002F5350 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E5776382C7342DE002F5350 /* TypographyLineHeightViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3E57763B2C7342DE002F5350 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E57763A2C7342DE002F5350 /* TypographyLineHeightModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E57763D2C7342DE002F5350 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E57763C2C7342DE002F5350 /* TypographyLineHeightView.swift */,
+				3E5776212C73260A002F5350 /* TypographyLabelCell.swift */,
+				3E5776232C732618002F5350 /* TypographyTextViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E57763F2C7342DE002F5350 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3E57763E2C7342DE002F5350 /* TypographyLineHeightViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3E5776402C7342DE002F5350 /* TypographyLineHeight */ = {
+			isa = PBXGroup;
+			children = (
+				3E57763F2C7342DE002F5350 /* ViewModel */,
+				3E5776392C7342DE002F5350 /* Controller */,
+				3E57763B2C7342DE002F5350 /* Model */,
+				3E57763D2C7342DE002F5350 /* View */,
+			);
+			path = TypographyLineHeight;
+			sourceTree = "<group>";
+		};
+		3E5776482C7343ED002F5350 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E5776472C7343ED002F5350 /* ColorCaseViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3E57764A2C7343ED002F5350 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E5776492C7343ED002F5350 /* ColorCaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E57764C2C7343ED002F5350 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E57764B2C7343ED002F5350 /* ColorCaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E57764E2C7343ED002F5350 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3E57764D2C7343ED002F5350 /* ColorCaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3E57764F2C7343ED002F5350 /* ColorCase */ = {
+			isa = PBXGroup;
+			children = (
+				3E57764E2C7343ED002F5350 /* ViewModel */,
+				3E5776482C7343ED002F5350 /* Controller */,
+				3E57764A2C7343ED002F5350 /* Model */,
+				3E57764C2C7343ED002F5350 /* View */,
+			);
+			path = ColorCase;
 			sourceTree = "<group>";
 		};
 		3EB101F42C6C8AAF00E151F0 /* Functions */ = {
@@ -427,8 +547,8 @@
 		5BF7B2192999D1E500A36329 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3E5776132C730E61002F5350 /* ColorPalette */,
-				3E5776042C730CC6002F5350 /* Typography */,
+				3E5776282C734280002F5350 /* ColorTest */,
+				3E5776042C730CC6002F5350 /* TypographyTest */,
 				3E5775EF2C72E10A002F5350 /* Splash */,
 			);
 			path = Views;
@@ -563,6 +683,7 @@
 			knownRegions = (
 				en,
 				ko,
+				Base,
 			);
 			mainGroup = 5BC5C2482999CFB400A9B338;
 			packageReferences = (
@@ -619,34 +740,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE4E638299A35FE000F3744 /* BaseNavigationController.swift in Sources */,
+				3E5776502C7343ED002F5350 /* ColorCaseViewController.swift in Sources */,
 				3EB101FB2C6C8DB000E151F0 /* UIViewController+Extension.swift in Sources */,
 				3EB102092C6CA03A00E151F0 /* ComponentFont.swift in Sources */,
 				3EB101F82C6C8ADD00E151F0 /* CrashlyticsManager.swift in Sources */,
-				3E5776062C730CC6002F5350 /* TypographyModel.swift in Sources */,
 				3EB101FF2C6C8FDC00E151F0 /* UINavigationBar+Extension.swift in Sources */,
+				3E5776342C73429C002F5350 /* TypographyCaseView.swift in Sources */,
+				3E5776512C7343ED002F5350 /* ColorCaseModel.swift in Sources */,
+				3E5776322C73429C002F5350 /* TypographyCaseViewController.swift in Sources */,
+				3E5776412C7342DE002F5350 /* TypographyLineHeightViewController.swift in Sources */,
 				5BE4E636299A35FE000F3744 /* BaseTabBarController.swift in Sources */,
 				5BC5C2552999CFB400A9B338 /* AppDelegate.swift in Sources */,
 				3E5776162C730E61002F5350 /* ColorPaletteView.swift in Sources */,
+				3E5776352C73429C002F5350 /* TypographyCaseViewModel.swift in Sources */,
 				5BE4E637299A35FE000F3744 /* BaseViewController.swift in Sources */,
 				3E5776222C73260A002F5350 /* TypographyLabelCell.swift in Sources */,
 				3EB102012C6C8FDC00E151F0 /* UITextView+Extension.swift in Sources */,
 				3E5776242C732618002F5350 /* TypographyTextViewCell.swift in Sources */,
 				3E5776202C732034002F5350 /* BaseTableHeaderView.swift in Sources */,
 				3EB101F72C6C8ADD00E151F0 /* AnalyticsManager.swift in Sources */,
+				3E5776422C7342DE002F5350 /* TypographyLineHeightModel.swift in Sources */,
 				3E5775F62C72E19C002F5350 /* BaseViewModel.swift in Sources */,
 				3E5776152C730E61002F5350 /* ColorPaletteModel.swift in Sources */,
-				3E5776052C730CC6002F5350 /* TypographyViewController.swift in Sources */,
 				3E5775F02C72E10A002F5350 /* SplashViewController.swift in Sources */,
 				3E5775F32C72E10A002F5350 /* SplashViewModel.swift in Sources */,
+				3E5776432C7342DE002F5350 /* TypographyLineHeightView.swift in Sources */,
+				3E5776522C7343ED002F5350 /* ColorCaseView.swift in Sources */,
+				3E5776442C7342DE002F5350 /* TypographyLineHeightViewModel.swift in Sources */,
 				3EB101E62C6C3E5600E151F0 /* CommonFunctions.swift in Sources */,
 				3E5776142C730E61002F5350 /* ColorPaletteViewController.swift in Sources */,
 				3E5775F12C72E10A002F5350 /* SplashModel.swift in Sources */,
-				3E5776072C730CC6002F5350 /* TypographyView.swift in Sources */,
+				3E5776332C73429C002F5350 /* TypographyCaseModel.swift in Sources */,
 				3EB102002C6C8FDC00E151F0 /* UIApplication+Extension.swift in Sources */,
 				3EB102052C6C9DB700E151F0 /* ComponentColor.swift in Sources */,
 				5BC5C2572999CFB400A9B338 /* SceneDelegate.swift in Sources */,
-				3E5776082C730CC6002F5350 /* TypographyViewModel.swift in Sources */,
 				3E5776172C730E61002F5350 /* ColorPaletteViewModel.swift in Sources */,
+				3E5776532C7343ED002F5350 /* ColorCaseViewModel.swift in Sources */,
 				3E5775F22C72E10A002F5350 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

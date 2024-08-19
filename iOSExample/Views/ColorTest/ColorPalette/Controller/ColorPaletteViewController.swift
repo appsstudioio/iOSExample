@@ -1,5 +1,5 @@
 //
-//  TypographyViewController.swift
+//  ColorPaletteViewController.swift
 //  iOSExample
 //
 //  Created by 10-N3344 on 8/19/24.
@@ -10,10 +10,10 @@ import SnapKit
 import Then
 import Combine
 
-final class TypographyViewController: BaseViewController {
+final class ColorPaletteViewController: BaseViewController {
     
-    let subViews = TypographyView()
-    let viewModel = TypographyViewModel()
+    let subViews = ColorPaletteView()
+    let viewModel = ColorPaletteViewModel()
 
     override func loadView() {
         super.loadView()
@@ -37,7 +37,7 @@ final class TypographyViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // AnalyticsManager.setScreenName(screenName: Typography, screenClass: TypographyViewController.self)
+//        AnalyticsManager.setScreenName(screenName: ColorPalette, screenClass: ColorPaletteViewController.self)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -49,7 +49,7 @@ final class TypographyViewController: BaseViewController {
     }
 
     override var hidesBottomBarWhenPushed: Bool {
-        get { return false }
+        get { return true }
         set { super.hidesBottomBarWhenPushed = newValue }
     }
 
@@ -78,6 +78,7 @@ final class TypographyViewController: BaseViewController {
                 MedisayToastView.show(.error, message: errorMessage)
             }
         }.store(in: &cancellables)
+
 
         viewModel.baseState.apiResult.sink { [weak self] (isSuccess, type, data) in
             guard let self = self else { return }
@@ -126,54 +127,42 @@ final class TypographyViewController: BaseViewController {
 
     private func setupUI() {
         view.addSubview(subViews)
-        setNavigationBarTitle("타이포그라피".localization)
+        setNavigationBarTitle("")
 
         subViews.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-
-        subViews.tableView.delegate = self
-        subViews.tableView.dataSource = self
     }
 }
 
 // MARK: - extensions
-extension TypographyViewController {
+extension ColorPaletteViewController {
 
 }
 
+extension ColorPaletteViewController {
+
+}
+
+/*
 // MARK: - UITableViewDelegate, UITableViewDataSource
-extension TypographyViewController: UITableViewDelegate, UITableViewDataSource {
+extension ColorPaletteViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.sections.count
+        return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard viewModel.sections.count > section else { return 0 }
-        return viewModel.sections[section].data.count
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard viewModel.sections.count > indexPath.section else { return UITableViewCell() }
-        guard viewModel.sections[indexPath.section].data.count > indexPath.row else { return UITableViewCell() }
-        let font = viewModel.sections[indexPath.section].font
-        let data = viewModel.sections[indexPath.section].data[indexPath.row]
-
-        switch data.type {
-        case .label:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TypographyLabelCell.identifier) as? TypographyLabelCell else { return UITableViewCell() }
-            cell.updateUI(data: data, font: font)
-            return cell
-        case .textView:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TypographyTextViewCell.identifier) as? TypographyTextViewCell else { return UITableViewCell() }
-            cell.updateUI(data: data, font: font)
-            return cell
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.identifier) as? UITableViewCell else { return UITableViewCell() }
+        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return UITableView.automaticDimension
+        return .leastNonzeroMagnitude
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -189,14 +178,7 @@ extension TypographyViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard viewModel.sections.count > section else { return nil }
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: BaseTableHeaderView.identifier) as? BaseTableHeaderView else {
-            return nil
-        }
-        // \(fontType.font.familyName)
-        let fontType = viewModel.sections[section].font
-        header.updateUI(title: "폰트 사이즈: \(fontType.fontSize)pt \(fontType.weight.weightName)" )
-        return header
+        return nil
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -205,3 +187,4 @@ extension TypographyViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     }
 }
+*/

@@ -1,5 +1,5 @@
 //
-//  TypographyView.swift
+//  ColorCaseView.swift
 //  iOSExample
 //
 //  Created by 10-N3344 on 8/19/24.
@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class TypographyView: UIView {
+final class ColorCaseView: UIView {
     
     let tableView = UITableView(frame: .zero, style: .plain).then {
         $0.backgroundColor = UIColor.named(.backgroundColor)
@@ -17,9 +17,8 @@ final class TypographyView: UIView {
         $0.separatorColor = UIColor.named(.borderOpaque)
         $0.separatorInset = .zero
         $0.layoutMargins = .zero
-        $0.register(BaseTableHeaderView.self, forHeaderFooterViewReuseIdentifier: BaseTableHeaderView.identifier)
-        $0.register(TypographyLabelCell.self, forCellReuseIdentifier: TypographyLabelCell.identifier)
-        $0.register(TypographyTextViewCell.self, forCellReuseIdentifier: TypographyTextViewCell.identifier)
+//        $0.register(ContactsMainHeaderView.self, forHeaderFooterViewReuseIdentifier: ContactsMainHeaderView.identifier)
+        $0.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.identifier)
         $0.showsVerticalScrollIndicator = true
         if #available(iOS 15.0, *) {
             $0.sectionHeaderTopPadding = .leastNonzeroMagnitude
@@ -63,6 +62,6 @@ final class TypographyView: UIView {
 }
 
 // MARK: - extensions
-extension TypographyView {
+extension ColorCaseView {
     
 }

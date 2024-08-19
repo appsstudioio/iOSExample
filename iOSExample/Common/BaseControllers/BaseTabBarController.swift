@@ -111,8 +111,8 @@ extension BaseTabBarController {
         let badgeAttributes: [NSAttributedString.Key : Any] = [.foregroundColor: UIColor.named(.contentWhite), .font: ComponentFont.font(weight: .semibold, size: 8) as Any, .backgroundColor: UIColor.red as Any]
 
 
-        let typographyNaviVC = BaseNavigationController(rootViewController: TypographyViewController())
-        let colorPaletteNaviVC = BaseNavigationController(rootViewController: ColorPaletteViewController())
+        let typographyNaviVC = BaseNavigationController(rootViewController: TypographyCaseViewController())
+        let colorPaletteNaviVC = BaseNavigationController(rootViewController: ColorCaseViewController())
         
         typographyNaviVC.title = "타이포그라피".localization
         typographyNaviVC.tabBarItem.image = UIImage.getSFSymbolImage(name: "textformat.size", size: 18, weight: .regular, color: unSeletImageColor)

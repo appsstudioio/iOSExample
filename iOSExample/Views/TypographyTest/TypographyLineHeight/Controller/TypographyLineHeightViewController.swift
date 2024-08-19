@@ -1,5 +1,5 @@
 //
-//  ColorPaletteViewController.swift
+//  TypographyLineHeightViewController.swift
 //  iOSExample
 //
 //  Created by 10-N3344 on 8/19/24.
@@ -10,10 +10,10 @@ import SnapKit
 import Then
 import Combine
 
-final class ColorPaletteViewController: BaseViewController {
+final class TypographyLineHeightViewController: BaseViewController {
     
-    let subViews = ColorPaletteView()
-    let viewModel = ColorPaletteViewModel()
+    let subViews = TypographyLineHeightView()
+    let viewModel = TypographyLineHeightViewModel()
 
     override func loadView() {
         super.loadView()
@@ -30,14 +30,14 @@ final class ColorPaletteViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
+
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        AnalyticsManager.setScreenName(screenName: ColorPalette, screenClass: ColorPaletteViewController.self)
+        // AnalyticsManager.setScreenName(screenName: Typography, screenClass: TypographyViewController.self)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -49,7 +49,7 @@ final class ColorPaletteViewController: BaseViewController {
     }
 
     override var hidesBottomBarWhenPushed: Bool {
-        get { return false }
+        get { return true }
         set { super.hidesBottomBarWhenPushed = newValue }
     }
 
@@ -67,7 +67,7 @@ final class ColorPaletteViewController: BaseViewController {
 
     // MARK: - functions
     private func setBinding() {
-        
+
         /*
         // 공통의 서버 에러 팝업 메시지
         viewModel.baseState.apiErrorMessage.sink { [weak self] (isAlert, type, errorMessage) in
@@ -79,7 +79,6 @@ final class ColorPaletteViewController: BaseViewController {
             }
         }.store(in: &cancellables)
 
-
         viewModel.baseState.apiResult.sink { [weak self] (isSuccess, type, data) in
             guard let self = self else { return }
             switch type {
@@ -88,7 +87,7 @@ final class ColorPaletteViewController: BaseViewController {
             }
         }.store(in: &cancellables)
         */
-        
+
         /*
         NotificationCenter.default
             .publisher(for: MedisayNotificationList.socketCallBack.name)
@@ -127,42 +126,54 @@ final class ColorPaletteViewController: BaseViewController {
 
     private func setupUI() {
         view.addSubview(subViews)
-        setNavigationBarTitle("")
+        setNavigationBarTitle("타이포그라피".localization)
 
         subViews.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+
+        subViews.tableView.delegate = self
+        subViews.tableView.dataSource = self
     }
 }
 
 // MARK: - extensions
-extension ColorPaletteViewController {
+extension TypographyLineHeightViewController {
 
 }
 
-extension ColorPaletteViewController {
-
-}
-
-/*
 // MARK: - UITableViewDelegate, UITableViewDataSource
-extension ColorPaletteViewController: UITableViewDelegate, UITableViewDataSource {
+extension TypographyLineHeightViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return viewModel.sections.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        guard viewModel.sections.count > section else { return 0 }
+        return viewModel.sections[section].data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.identifier) as? UITableViewCell else { return UITableViewCell() }
-        return cell
+        guard viewModel.sections.count > indexPath.section else { return UITableViewCell() }
+        guard viewModel.sections[indexPath.section].data.count > indexPath.row else { return UITableViewCell() }
+        let font = viewModel.sections[indexPath.section].font
+        let data = viewModel.sections[indexPath.section].data[indexPath.row]
+
+        switch data.type {
+        case .label:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TypographyLabelCell.identifier) as? TypographyLabelCell else { return UITableViewCell() }
+            cell.updateUI(data: data, font: font)
+            return cell
+        case .textView:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TypographyTextViewCell.identifier) as? TypographyTextViewCell else { return UITableViewCell() }
+            cell.updateUI(data: data, font: font)
+            return cell
+        }
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return .leastNonzeroMagnitude
+        return UITableView.automaticDimension
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -178,7 +189,14 @@ extension ColorPaletteViewController: UITableViewDelegate, UITableViewDataSource
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return nil
+        guard viewModel.sections.count > section else { return nil }
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: BaseTableHeaderView.identifier) as? BaseTableHeaderView else {
+            return nil
+        }
+        // \(fontType.font.familyName)
+        let fontType = viewModel.sections[section].font
+        header.updateUI(title: "폰트 사이즈: \(fontType.fontSize)pt \(fontType.weight.weightName)" )
+        return header
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -187,4 +205,3 @@ extension ColorPaletteViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     }
 }
-*/
