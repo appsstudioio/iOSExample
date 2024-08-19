@@ -42,7 +42,6 @@ class BaseTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
     }
 
     private func moveLine() {
@@ -78,64 +77,66 @@ class BaseTabBarController: UITabBarController {
 extension BaseTabBarController {
     
     private func setTapBarViewControllers() {
-//        let homeVC = HomeViewController(viewModel: HomeViewModel())
-//        let homeNavigationVC = BaseNavigationController(rootViewController: homeVC)
-//
-//        let viewModel = RegistrationViewModel(draftId: nil, isSingup: false)
-//        let tmpVC = RegistrationViewController(viewModel: viewModel)
-//        let tmpNvVC = BaseNavigationController(rootViewController: tmpVC)
-//
-//        let myPageVC = MyPageViewController()
-//        let myPageNVVC = BaseNavigationController(rootViewController: myPageVC)
-//
-//        let viewControllers = [homeNavigationVC, tmpNvVC, myPageNVVC]
-//        self.setViewControllers(viewControllers, animated: true)
+        
+        view.backgroundColor = UIColor.named(.backgroundColor)
+        let unSeletImageColor = UIColor.lightGray
+        let seletImageColor = UIColor.named(.mainColor)
 
+        let tabBar: UITabBar = self.tabBar
+        tabBar.backgroundColor = UIColor.named(.backgroundColor)
+        tabBar.barTintColor = UIColor.named(.backgroundColor)
+        ///선택되었을 때 타이틀 컬러
+        tabBar.tintColor = seletImageColor
+        ///선택안된거 타이틀 컬러
+        tabBar.unselectedItemTintColor = unSeletImageColor
+        tabBar.isHidden = false
+        tabBar.isTranslucent = false
+
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.backgroundColor = UIColor.named(.backgroundColor)
+        tabBarAppearance.shadowImage = UIImage.colorToBackgroundImage(UIColor.named(.borderOpaque))
+        tabBarAppearance.backgroundImage = UIImage.colorToBackgroundImage(UIColor.named(.backgroundColor))
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+
+        if #available(iOS 15.0, *) {
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        }
+
+        let attributes: [NSAttributedString.Key : Any] = [.font: ComponentFont.font(weight: .regular, size: 10) as Any,
+                                                          .foregroundColor: unSeletImageColor as Any]
+
+        let attributesSelect: [NSAttributedString.Key : Any] = [.font: ComponentFont.font(weight: .semibold, size: 10) as Any,
+                                                                .foregroundColor: seletImageColor as Any]
+        // 배지 스타일
+        let badgeAttributes: [NSAttributedString.Key : Any] = [.foregroundColor: UIColor.named(.contentWhite), .font: ComponentFont.font(weight: .semibold, size: 8) as Any, .backgroundColor: UIColor.red as Any]
+
+
+        let typographyNaviVC = BaseNavigationController(rootViewController: TypographyViewController())
+        let colorPaletteNaviVC = BaseNavigationController(rootViewController: ColorPaletteViewController())
+        
+        typographyNaviVC.title = "타이포그라피".localization
+        typographyNaviVC.tabBarItem.image = UIImage.getSFSymbolImage(name: "textformat.size", size: 18, weight: .regular, color: unSeletImageColor)
+        typographyNaviVC.tabBarItem.selectedImage = UIImage.getSFSymbolImage(name: "textformat.size", size: 18, weight: .regular, color: seletImageColor)
+        typographyNaviVC.tabBarItem.setTitleTextAttributes(attributes, for: .normal)
+        typographyNaviVC.tabBarItem.setTitleTextAttributes(attributesSelect, for: .selected)
+        typographyNaviVC.tabBarItem.setTitleTextAttributes(attributesSelect, for: .highlighted)
+        typographyNaviVC.tabBarItem.setBadgeTextAttributes(badgeAttributes, for: .normal)
+        typographyNaviVC.tabBarItem.setBadgeTextAttributes(badgeAttributes, for: .selected)
+
+        colorPaletteNaviVC.title = "팔레트".localization
+        colorPaletteNaviVC.tabBarItem.image = UIImage.getSFSymbolImage(name: "paintpalette", size: 18, weight: .regular, color: unSeletImageColor)
+        colorPaletteNaviVC.tabBarItem.selectedImage = UIImage.getSFSymbolImage(name: "paintpalette", size: 18, weight: .regular, color: seletImageColor)
+        colorPaletteNaviVC.tabBarItem.setTitleTextAttributes(attributes, for: .normal)
+        colorPaletteNaviVC.tabBarItem.setTitleTextAttributes(attributesSelect, for: .selected)
+        colorPaletteNaviVC.tabBarItem.setTitleTextAttributes(attributesSelect, for: .highlighted)
+        colorPaletteNaviVC.tabBarItem.setBadgeTextAttributes(badgeAttributes, for: .normal)
+        colorPaletteNaviVC.tabBarItem.setBadgeTextAttributes(badgeAttributes, for: .selected)
+
+        let viewControllers = [typographyNaviVC, colorPaletteNaviVC]
+        self.setViewControllers(viewControllers, animated: true)
 #if DEVELOP
         self.tabBar.addSubview(lineView)
 #endif
-    }
-    
-    private func setupUI(){
-        delegate = self
-        view.backgroundColor = .white
-        
-//        let itemImages: [UIImage] = [VImage.ic_home()!, VImage.ic_reg()!, VImage.ic_mypage()!]
-//        let titles = [VText.tabbar_home(), VText.tabbar_reg(), VText.tabbar_mypage()]
-//
-//        let unSeletImageColor = UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1.0)
-//        let attributes: [NSAttributedString.Key : Any] = [.font: VFont.pretendardSemiBold(size: 10) as Any,
-//                                                          .foregroundColor: VColor.vTextGray05() as Any]
-//
-//        let attributesSelect: [NSAttributedString.Key : Any] = [.font: VFont.pretendardSemiBold(size: 10) as Any,
-//                                                                .foregroundColor: VColor.vPrimaryPurple1() as Any]
-//        let tabbarItems = self.tabBar.items
-//        for (index, item) in (tabbarItems?.enumerated())! {
-//            item.image = itemImages[index].withTintColor(unSeletImageColor)
-//            item.selectedImage = itemImages[index].withTintColor(VColor.vPrimaryPurple1()!)
-//            item.title = titles[index]
-//
-//
-//            item.setTitleTextAttributes(attributes, for: .normal)
-//            item.setTitleTextAttributes(attributesSelect, for: .selected)
-//            item.setTitleTextAttributes(attributesSelect, for: .highlighted)
-//        }
-//
-//        let tabBar: UITabBar = self.tabBar
-//        tabBar.backgroundColor = UIColor.white
-//        tabBar.barTintColor = UIColor.white
-//        ///선택되었을 때 타이틀 컬러
-//        tabBar.tintColor = VColor.vPrimaryPurple1()
-//        ///선택안된거 타이틀 컬러
-//        tabBar.unselectedItemTintColor = VColor.vTextGray05()
-//        tabBar.isHidden = false
-//        tabBar.isTranslucent = false
-        
-        tabBar.addSubview(lineView)
-        lineView.snp.makeConstraints {
-            $0.top.left.right.equalToSuperview()
-            $0.height.equalTo(1)
-        }
     }
 
     // 스크롤 탑 포지션

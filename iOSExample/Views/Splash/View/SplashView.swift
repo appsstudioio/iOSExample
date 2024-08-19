@@ -1,15 +1,15 @@
 //
-//  MainView.swift
+//  SplashView.swift
 //  iOSExample
 //
-//  Created by dongju.lim on 2023/02/13.
+//  Created by 10-N3344 on 8/19/24.
 //
 
 import UIKit
 import SnapKit
 import Then
 
-final class MainView: UIView {
+final class SplashView: UIView {
     
     let helloLabel = UILabel().then {
         $0.text = "Hello iOS Example"
@@ -17,19 +17,25 @@ final class MainView: UIView {
         $0.textColor = .darkText
         $0.textAlignment = .center
     }
-    
+
     // MARK: - init()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setView()
+        setupUI()
     }
 
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - functions
-    private func setView() {
+    private func setupUI() {
+        backgroundColor = UIColor.named(.backgroundGray)
         addSubview(helloLabel)
         backgroundColor = .white
         helloLabel.snp.makeConstraints {
@@ -41,3 +47,6 @@ final class MainView: UIView {
 }
 
 // MARK: - extensions
+extension SplashView {
+    
+}

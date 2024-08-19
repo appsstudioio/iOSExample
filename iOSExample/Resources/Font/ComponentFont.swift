@@ -11,7 +11,7 @@
 import Foundation
 import UIKit
 
-public enum ComponentFont {
+public enum ComponentFont: CaseIterable {
     case r08px, sb08px, b08px
     case r09px, sb09px, b09px
     case r10px, sb10px, b10px
@@ -110,62 +110,6 @@ public extension ComponentFont {
     }
 
     var lineHeight: CGFloat {
-//        switch self {
-//        case .r08px, .sb08px, .b08px:
-//            return 11.0
-//        case .r09px, .sb09px, .b09px:
-//            return 12.0
-//        case .r10px, .sb10px, .b10px:
-//            return 13.0
-//        case .r11px, .sb11px, .b11px:
-//            return 14.0
-//        case .r12px, .sb12px, .b12px:
-//            return 15.0
-//        case .r13px, .sb13px, .b13px:
-//            return 16.0
-//        case .r14px, .sb14px, .b14px:
-//            return 19.0
-//        case .r15px, .sb15px, .b15px:
-//            return 20.0
-//        case .r16px, .sb16px, .b16px:
-//            return 21.0
-//        case .r17px, .sb17px, .b17px:
-//            return 22.0
-//        case .r18px, .sb18px, .b18px:
-//            return 23.0
-//        case .r19px, .sb19px, .b19px:
-//            return 24.0
-//        case .r20px, .sb20px, .b20px:
-//            return 25.0
-//        case .r21px, .sb21px, .b21px:
-//            return 26.0
-//        case .r22px, .sb22px, .b22px:
-//            return 28.0
-//        case .r23px, .sb23px, .b23px:
-//            return 29.0
-//        case .r24px, .sb24px, .b24px:
-//            return 30.0
-//        case .r25px, .sb25px, .b25px:
-//            return 31.0
-//        case .r26px, .sb26px, .b26px:
-//            return 32.0
-//        case .r27px, .sb27px, .b27px:
-//            return 33.0
-//        case .r28px, .sb28px, .b28px:
-//            return 34.0
-//        case .r29px, .sb29px, .b29px:
-//            return 35.0
-//        case .r30px, .sb30px, .b30px:
-//            return 37.0
-//        case .r31px, .sb31px, .b31px:
-//            return 38.0
-//        case .r32px, .sb32px, .b32px:
-//            return 39.0
-//        case .r33px, .sb33px, .b33px:
-//            return 40.0
-//        case .r34px, .sb34px, .b34px:
-//            return 41.0
-//        }
         return self.fontLineHeight
     }
 

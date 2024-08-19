@@ -7,7 +7,7 @@
 
 import UIKit
 
-public enum ComponentColor: String {
+public enum ComponentColor: String, CaseIterable {
     case backgroundBoxColor
     case backgroundColor
     case backgroundDimm
