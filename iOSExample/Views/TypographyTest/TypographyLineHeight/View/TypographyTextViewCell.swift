@@ -90,11 +90,11 @@ final class TypographyTextViewCell: UITableViewCell {
 
 extension TypographyTextViewCell {
 
-    func updateUI(data: TypographyDataModel, font: ComponentFont) {
+    func updateUI(data: TypographyDataModel, font: ComponentFont, boxHeight: Int) {
         textView.snp.remakeConstraints {
             $0.top.bottom.equalToSuperview().inset(12)
             $0.leading.trailing.equalToSuperview().inset(12)
-            $0.height.greaterThanOrEqualTo(font.font.lineHeight)
+            $0.height.greaterThanOrEqualTo(boxHeight)
         }
         textView.attributedText = data.text.toAttributed(fontType: font, color: UIColor.named(.contentSecondary), lineBreakMode: .byCharWrapping)
     }

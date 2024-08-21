@@ -46,10 +46,10 @@ func DLog(_ message: Any? = "",
 class CommonFunctions {
     static func showAlertGoToSetting() {
         guard let viewVC = UIApplication.shared.topViewController() else { return }
-        viewVC.alertConfirmWith(title: "알림",
-                                message: "현재 카메라 사용에 대한 접근 권한이 없습니다.\n설정에서 접근을 활성화 할 수 있습니다.",
-                                cancleButton: "닫기",
-                                okayButton: "설정") { isOkay in
+        viewVC.alertConfirmWith(title: "alert_tile".localization,
+                                message: "camera_noti_msg".localization,
+                                cancleButton: "close".localization,
+                                okayButton: "setting".localization) { isOkay in
             if isOkay {
                 CommonUtils.openSetting()
             }

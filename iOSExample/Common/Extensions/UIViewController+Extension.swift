@@ -107,7 +107,7 @@ extension UIViewController {
                     self?.present(picker, animated: true)
                 }
             default:
-                self.alertWith(message: "사진 접근 권한을 설정하세요.")
+                self.alertWith(message: "photo_access_noti_msg".localization)
                 break
             }
         }
@@ -135,7 +135,7 @@ extension UIViewController {
                     self.present(imagePicker, animated: true)
                 }
             default:
-                self.alertWith(message: "사진 접근 권한을 설정하세요.")
+                self.alertWith(message: "photo_access_noti_msg".localization)
                 break
             }
         }
@@ -147,10 +147,10 @@ extension UIViewController {
         if hidden {
             self.navigationItem.setLeftBarButton(nil, animated: true)
         } else {
-            var backImage: UIImage? = UIImage(named: "actionbar_btn_back")?.withRenderingMode(.alwaysTemplate)
+            var backImage: UIImage? = UIImage(systemName: "arrow.backward")?.withRenderingMode(.alwaysTemplate)
             if (self.presentingViewController != nil) {
                 if navigationController?.viewControllers.count == 1 || navigationController == nil {
-                    backImage = UIImage(named: "actionbar_btn_close")?.withRenderingMode(.alwaysTemplate)
+                    backImage = UIImage(systemName: "xmark")?.withRenderingMode(.alwaysTemplate)
                 }
             }
             navigationItem.hidesBackButton = true

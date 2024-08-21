@@ -114,7 +114,7 @@ extension BaseTabBarController {
         let typographyNaviVC = BaseNavigationController(rootViewController: TypographyCaseViewController())
         let colorPaletteNaviVC = BaseNavigationController(rootViewController: ColorCaseViewController())
         
-        typographyNaviVC.title = "타이포그라피".localization
+        typographyNaviVC.title = "typography".localization
         typographyNaviVC.tabBarItem.image = UIImage.getSFSymbolImage(name: "textformat.size", size: 18, weight: .regular, color: unSeletImageColor)
         typographyNaviVC.tabBarItem.selectedImage = UIImage.getSFSymbolImage(name: "textformat.size", size: 18, weight: .regular, color: seletImageColor)
         typographyNaviVC.tabBarItem.setTitleTextAttributes(attributes, for: .normal)
@@ -123,7 +123,7 @@ extension BaseTabBarController {
         typographyNaviVC.tabBarItem.setBadgeTextAttributes(badgeAttributes, for: .normal)
         typographyNaviVC.tabBarItem.setBadgeTextAttributes(badgeAttributes, for: .selected)
 
-        colorPaletteNaviVC.title = "팔레트".localization
+        colorPaletteNaviVC.title = "color".localization
         colorPaletteNaviVC.tabBarItem.image = UIImage.getSFSymbolImage(name: "paintpalette", size: 18, weight: .regular, color: unSeletImageColor)
         colorPaletteNaviVC.tabBarItem.selectedImage = UIImage.getSFSymbolImage(name: "paintpalette", size: 18, weight: .regular, color: seletImageColor)
         colorPaletteNaviVC.tabBarItem.setTitleTextAttributes(attributes, for: .normal)
@@ -172,8 +172,8 @@ extension BaseTabBarController: UITabBarControllerDelegate {
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("selected \(tabBarController.selectedIndex)")
-        
+        DLog("selected \(tabBarController.selectedIndex)")
+
         if let naviVc = viewController as? UINavigationController, let viewVC = naviVc.viewControllers.last {
 //            if viewVC == preVC || (preVC == nil && viewVC.isKind(of: HomeViewController.self)) {
 //               if viewVC.isKind(of: UIViewController.self) {

@@ -67,56 +67,6 @@ final class ColorCaseViewController: BaseViewController {
 
     // MARK: - functions
     private func setBinding() {
-        
-        /*
-        // 공통의 서버 에러 팝업 메시지
-        viewModel.baseState.apiErrorMessage.sink { [weak self] (isAlert, type, errorMessage) in
-            guard let self = self else { return }
-            if isAlert {
-                self.alertWith(title: "알림", message: errorMessage)
-            } else {
-                MedisayToastView.show(.error, message: errorMessage)
-            }
-        }.store(in: &cancellables)
-
-        viewModel.baseState.apiResult.sink { [weak self] (isSuccess, type, data) in
-            guard let self = self else { return }
-            switch type {
-            default:
-                break
-            }
-        }.store(in: &cancellables)
-        */
-        
-        /*
-        NotificationCenter.default
-            .publisher(for: MedisayNotificationList.socketCallBack.name)
-            .sink { notification in
-                // guard let self = self else { return } [weak self]
-                if let socketData = notification.userInfo?["socketData"] as? SocketCallBackDataModel {
-                    switch socketData.type {
-                    default:
-                        break
-                    }
-                }
-            }.store(in: &cancellables)
-
-        viewModel.baseState.socketResult.sink { [weak self] (type, data) in
-            guard let self = self else { return }
-            switch type {
-            case .connect:
-                DLog(">>>>>>>> connect <<<<<<<<")
-            case .reconnect:
-                DLog(">>>>>>>> reconnect <<<<<<<<")
-            case .joinroom:
-                DLog(">>>>>>>> joinroom <<<<<<<<")
-            case .disconnect:
-                DLog(">>>>>>>> disConnect <<<<<<<<")
-            default:
-                break;
-            }
-        }.store(in: &cancellables)
-         */
 
         viewModel.state.updateUI.sink { [weak self] _ in
             self?.subViews.tableView.reloadData()
@@ -126,7 +76,8 @@ final class ColorCaseViewController: BaseViewController {
 
     private func setupUI() {
         view.addSubview(subViews)
-        setNavigationBarTitle("컬러".localization)
+        setNavigationBarTitle("color".localization)
+        hideNavigationLeftButton(hidden: true)
 
         subViews.snp.makeConstraints {
             $0.edges.equalToSuperview()

@@ -15,7 +15,7 @@ extension ColorTestCaseType {
     var title: String {
         switch self {
         case .colorPalette:
-            return "팔레트"
+            return "palette".localization
         }
     }
 }

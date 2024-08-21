@@ -33,6 +33,24 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+
+    func onActionSheet(title: String? = nil,
+                       message: String = "",
+                       buttons: [UIAlertAction],
+                       customView: UIView? ) {
+        let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        buttons.forEach {
+            actionSheet.addAction($0)
+        }
+        let cancel = UIAlertAction(title: "cancel".localization, style: .cancel, handler: nil)
+        actionSheet.addAction(cancel)
+        if (UIDevice().userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
+            actionSheet.popoverPresentationController?.sourceView = customView
+            actionSheet.popoverPresentationController?.sourceRect = customView?.frame ?? .zero
+            actionSheet.popoverPresentationController?.permittedArrowDirections = []
+        }
+        self.present(actionSheet, animated: true, completion: nil)
+    }
 }
 
 // MARK: - SFSafariViewControllerDelegate
@@ -67,7 +85,7 @@ extension BaseViewController: MFMailComposeViewControllerDelegate {
 
     func showEmailView(address: [String], subject: String, message: String, isHTML: Bool = false ) {
         if !MFMailComposeViewController.canSendMail() {
-            alertWith(title: "알림", message: "메일 앱이 없거나 메일 설정이 되지 않아 사용이 불가능합니다.")
+            alertWith(title: "alert_tile".localization, message: "mail_none_noti_msg".localization)
             return
         }
 

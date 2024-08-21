@@ -78,12 +78,12 @@ final class TypographyLabelCell: UITableViewCell {
 
 extension TypographyLabelCell {
 
-    func updateUI(data: TypographyDataModel, font: ComponentFont) {
+    func updateUI(data: TypographyDataModel, font: ComponentFont, boxHeight: Int) {
 
         label.snp.remakeConstraints {
             $0.top.bottom.equalToSuperview().inset(12)
             $0.leading.trailing.equalToSuperview().inset(12)
-            $0.height.greaterThanOrEqualTo(font.font.lineHeight)
+            $0.height.greaterThanOrEqualTo(boxHeight)
         }
 
         label.attributedText = data.text.toAttributed(fontType: font, color: UIColor.named(.contentSecondary), lineBreakMode: .byCharWrapping)

@@ -67,67 +67,15 @@ final class TypographyCaseViewController: BaseViewController {
 
     // MARK: - functions
     private func setBinding() {
-        
-        /*
-        // 공통의 서버 에러 팝업 메시지
-        viewModel.baseState.apiErrorMessage.sink { [weak self] (isAlert, type, errorMessage) in
-            guard let self = self else { return }
-            if isAlert {
-                self.alertWith(title: "알림", message: errorMessage)
-            } else {
-                MedisayToastView.show(.error, message: errorMessage)
-            }
-        }.store(in: &cancellables)
-
-
-        viewModel.baseState.apiResult.sink { [weak self] (isSuccess, type, data) in
-            guard let self = self else { return }
-            switch type {
-            default:
-                break
-            }
-        }.store(in: &cancellables)
-        */
-        
-        /*
-        NotificationCenter.default
-            .publisher(for: MedisayNotificationList.socketCallBack.name)
-            .sink { notification in
-                // guard let self = self else { return } [weak self]
-                if let socketData = notification.userInfo?["socketData"] as? SocketCallBackDataModel {
-                    switch socketData.type {
-                    default:
-                        break
-                    }
-                }
-            }.store(in: &cancellables)
-
-        viewModel.baseState.socketResult.sink { [weak self] (type, data) in
-            guard let self = self else { return }
-            switch type {
-            case .connect:
-                DLog(">>>>>>>> connect <<<<<<<<")
-            case .reconnect:
-                DLog(">>>>>>>> reconnect <<<<<<<<")
-            case .joinroom:
-                DLog(">>>>>>>> joinroom <<<<<<<<")
-            case .disconnect:
-                DLog(">>>>>>>> disConnect <<<<<<<<")
-            default:
-                break;
-            }
-        }.store(in: &cancellables)
-         */
-
         viewModel.state.updateUI.sink { [weak self] _ in
             self?.subViews.tableView.reloadData()
         }.store(in: &cancellables)
-
     }
 
     private func setupUI() {
         view.addSubview(subViews)
-        setNavigationBarTitle("타이포그라피".localization)
+        hideNavigationLeftButton(hidden: true)
+        setNavigationBarTitle("typography".localization)
 
         subViews.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -186,6 +134,10 @@ extension TypographyCaseViewController: UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        guard viewModel.lists.count > indexPath.row else { return }
+        let type = viewModel.lists[indexPath.row]
+        let moveVC = type.viewVC
+        self.navigationController?.pushViewController(moveVC, animated: true)
     }
 
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {

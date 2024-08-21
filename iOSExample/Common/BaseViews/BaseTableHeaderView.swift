@@ -28,7 +28,7 @@ class BaseTableHeaderView: UITableViewHeaderFooterView {
 
     private func setupUI() {
         backgroundColor = .clear
-        contentView.backgroundColor = UIColor.named(.backgroundGray)
+        contentView.backgroundColor = UIColor.named(.mainColor)
 
         let boxView = UIView()
         boxView.backgroundColor = .clear
@@ -55,7 +55,7 @@ class BaseTableHeaderView: UITableViewHeaderFooterView {
 extension BaseTableHeaderView {
 
     func updateUI(title: String) {
-        titleLabel.attributedText = title.toAttributed(fontType: .sb14px, color: UIColor.named(.contentPrimary))
+        titleLabel.attributedText = title.toAttributed(fontType: .sb14px, color: UIColor.named(.contentWhite))
     }
 
     func updateAttributedUI(_ attributedText: NSAttributedString) {

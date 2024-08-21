@@ -29,6 +29,8 @@ final class TypographyLineHeightView: UIView {
         $0.bounces = false
         $0.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
     }
+    
+    let headerInputView = TypographyLineHeightInputView()
 
     // MARK: - init()
     override init(frame: CGRect) {
@@ -55,6 +57,8 @@ final class TypographyLineHeightView: UIView {
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+
+        tableView.tableHeaderView = headerInputView
     }
 }
 

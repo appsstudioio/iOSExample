@@ -8,17 +8,34 @@
 import Foundation
 import UIKit
 
+struct TypographyLineHeightSaveModel {
+    var font: ComponentFont?
+    var boxSize: Int?
+}
+
 enum TypographyTextViewType {
     case label, textView
+}
+
+extension TypographyTextViewType {
+    var title: String {
+        switch self {
+        case .label:
+            return "uilabel_title".localization
+        case .textView:
+            return "textview_title".localization
+        }
+    }
 }
 
 typealias TypographyDataModel = TypographySectionModel.DataModel
 public struct TypographySectionModel {
     var font: ComponentFont
+    var type: TypographyTextViewType
+    var boxSize: Int
     var data: [DataModel] = []
 
     struct DataModel {
-        var type: TypographyTextViewType
         var text: String
     }
 }

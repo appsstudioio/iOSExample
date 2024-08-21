@@ -18,11 +18,22 @@ extension TypographyTestCaseType {
     var title: String {
         switch self {
         case .lineHeight:
-            return "LineHeight"
+            return "line_height".localization
         case .attributedString:
-            return "Font Style"
+            return "font_style".localization
         case .customFont:
-            return "Custom Font"
+            return "custom_font".localization
+        }
+    }
+
+    var viewVC: UIViewController {
+        switch self {
+        case .lineHeight:
+            return TypographyLineHeightViewController()
+        case .attributedString:
+            return UIViewController()
+        case .customFont:
+            return UIViewController()
         }
     }
 }

@@ -68,65 +68,32 @@ final class TypographyLineHeightViewController: BaseViewController {
     // MARK: - functions
     private func setBinding() {
 
-        /*
-        // 공통의 서버 에러 팝업 메시지
-        viewModel.baseState.apiErrorMessage.sink { [weak self] (isAlert, type, errorMessage) in
-            guard let self = self else { return }
-            if isAlert {
-                self.alertWith(title: "알림", message: errorMessage)
-            } else {
-                MedisayToastView.show(.error, message: errorMessage)
-            }
+        subViews.headerInputView.fontSelect.tapItem.sink { [weak self] _ in
+            guard let sself = self else { return }
+            sself.showFontSelectView()
         }.store(in: &cancellables)
 
-        viewModel.baseState.apiResult.sink { [weak self] (isSuccess, type, data) in
-            guard let self = self else { return }
-            switch type {
-            default:
-                break
-            }
+        subViews.headerInputView.boxHeightSelect.tapItem.sink { [weak self] _ in
+            guard let sself = self else { return }
+            sself.showBoxHegihtSelectView()
         }.store(in: &cancellables)
-        */
-
-        /*
-        NotificationCenter.default
-            .publisher(for: MedisayNotificationList.socketCallBack.name)
-            .sink { notification in
-                // guard let self = self else { return } [weak self]
-                if let socketData = notification.userInfo?["socketData"] as? SocketCallBackDataModel {
-                    switch socketData.type {
-                    default:
-                        break
-                    }
-                }
-            }.store(in: &cancellables)
-
-        viewModel.baseState.socketResult.sink { [weak self] (type, data) in
-            guard let self = self else { return }
-            switch type {
-            case .connect:
-                DLog(">>>>>>>> connect <<<<<<<<")
-            case .reconnect:
-                DLog(">>>>>>>> reconnect <<<<<<<<")
-            case .joinroom:
-                DLog(">>>>>>>> joinroom <<<<<<<<")
-            case .disconnect:
-                DLog(">>>>>>>> disConnect <<<<<<<<")
-            default:
-                break;
-            }
+        
+        subViews.headerInputView.searchBtn.tapPublisher.sink { [weak self] _ in
+            guard let sself = self else { return }
+            sself.viewModel.makeTestData()
         }.store(in: &cancellables)
-         */
 
-        viewModel.state.updateUI.sink { [weak self] _ in
-            self?.subViews.tableView.reloadData()
+        viewModel.state.updateUI.sink { [weak self] isEnabled in
+            guard let sself = self else { return }
+            sself.subViews.headerInputView.updateUI(sself.viewModel.saveModel, isEnabled: isEnabled)
+            sself.subViews.tableView.reloadData()
         }.store(in: &cancellables)
 
     }
 
     private func setupUI() {
         view.addSubview(subViews)
-        setNavigationBarTitle("타이포그라피".localization)
+        setNavigationBarTitle("line_height".localization)
 
         subViews.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -139,7 +106,44 @@ final class TypographyLineHeightViewController: BaseViewController {
 
 // MARK: - extensions
 extension TypographyLineHeightViewController {
+    func handlerSelectFontSize(_ alert: UIAlertAction) {
+        if let selectFont = viewModel.fontLists.filter({ "\($0.fontSize)pt \($0.weight.weightName)" == alert.title }).first {
+            viewModel.setFont(selectFont)
+            subViews.headerInputView.fontSelect.isEnabled = true
+        }
+    }
 
+    func showFontSelectView() {
+        var buttons: [UIAlertAction] = []
+
+        viewModel.fontLists.forEach { font in
+            buttons.append(UIAlertAction(title: "\(font.fontSize)pt \(font.weight.weightName)", style: .default, handler: handlerSelectFontSize))
+        }
+        self.onActionSheet(title: "",
+                           buttons: buttons,
+                           customView: subViews.headerInputView.fontSelect)
+    }
+    
+    func handlerSelectBoxHeight(_ alert: UIAlertAction) {
+        if let selectHeight = viewModel.boxSizeLists.filter({ "\($0)" == alert.title }).first {
+            viewModel.setBoxSize(selectHeight)
+        }
+    }
+
+    func showBoxHegihtSelectView() {
+        guard viewModel.boxSizeLists.count > 0 else {
+            self.alertWith(message: "font_size_noti_msg".localization)
+            return
+        }
+        var buttons: [UIAlertAction] = []
+
+        viewModel.boxSizeLists.forEach { size in
+            buttons.append(UIAlertAction(title: "\(size)", style: .default, handler: handlerSelectBoxHeight))
+        }
+        self.onActionSheet(title: "",
+                           buttons: buttons,
+                           customView: subViews.headerInputView.fontSelect)
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -158,16 +162,18 @@ extension TypographyLineHeightViewController: UITableViewDelegate, UITableViewDa
         guard viewModel.sections.count > indexPath.section else { return UITableViewCell() }
         guard viewModel.sections[indexPath.section].data.count > indexPath.row else { return UITableViewCell() }
         let font = viewModel.sections[indexPath.section].font
+        let type = viewModel.sections[indexPath.section].type
+        let boxHeight = viewModel.sections[indexPath.section].boxSize
         let data = viewModel.sections[indexPath.section].data[indexPath.row]
 
-        switch data.type {
+        switch type {
         case .label:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TypographyLabelCell.identifier) as? TypographyLabelCell else { return UITableViewCell() }
-            cell.updateUI(data: data, font: font)
+            cell.updateUI(data: data, font: font, boxHeight: boxHeight)
             return cell
         case .textView:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TypographyTextViewCell.identifier) as? TypographyTextViewCell else { return UITableViewCell() }
-            cell.updateUI(data: data, font: font)
+            cell.updateUI(data: data, font: font, boxHeight: boxHeight)
             return cell
         }
     }
@@ -195,7 +201,8 @@ extension TypographyLineHeightViewController: UITableViewDelegate, UITableViewDa
         }
         // \(fontType.font.familyName)
         let fontType = viewModel.sections[section].font
-        header.updateUI(title: "폰트 사이즈: \(fontType.fontSize)pt \(fontType.weight.weightName)" )
+        let type = viewModel.sections[section].type
+        header.updateUI(title: String(format: "font_size_title".localization, fontType.fontSize, type.title))
         return header
     }
 
