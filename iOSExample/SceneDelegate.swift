@@ -7,10 +7,14 @@
 
 import UIKit
 import FirebaseRemoteConfig
+import Network
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    // MARK: - Network reachability variables
+    var pathMonitor: NWPathMonitor?
+    var isOnline: Bool = true
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -18,10 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         if let windowScene = (scene as? UIWindowScene) {
             remoteConfigFetch()
+            //            FBRemoteConfig.shared.fetch()
             window = UIWindow(windowScene: windowScene)
-//            FBRemoteConfig.shared.fetch()
-            let mainVC = MainViewController()
-            window?.rootViewController = mainVC // mainViewController
+            window?.rootViewController = SplashViewController()
             window?.makeKeyAndVisible()
         }
     }
@@ -46,12 +49,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        startMonitoring()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        stopMonitoring()
     }
 
     private func remoteConfigFetch() {
@@ -75,5 +80,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
 
+    deinit {
+        stopMonitoring()
+    }
+}
+
+extension SceneDelegate {
+    private func startMonitoring() {
+        pathMonitor = NWPathMonitor()
+        let monitoringQueue = DispatchQueue(label: "\(CommonUtils.getBundleIdentifier).NetworkConnectivityManager", qos: .utility)
+        pathMonitor?.pathUpdateHandler = { path in
+            DLog("## >>>> network status :: \(path.status)")
+            self.isOnline = (path.status == .satisfied)
+//            NotificationCenter.default.post(name: MedisayNotificationList.networkConnectivityDidChange.name, object: path)
+        }
+        pathMonitor?.start(queue: monitoringQueue)
+    }
+
+    private func stopMonitoring() {
+        pathMonitor?.cancel()
+    }
 }
 
