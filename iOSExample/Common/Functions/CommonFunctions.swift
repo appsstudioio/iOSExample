@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-#if canImport(Firebase)
+#if canImport(CommonUtils)
 @_exported import CommonUtils
 #endif
 #if canImport(SnapKit)
