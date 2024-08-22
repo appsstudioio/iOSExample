@@ -69,6 +69,91 @@
         }
       }
     },
+    "change_paragraphstyle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changing the letter style"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "글자 스타일 변경"
+          }
+        }
+      }
+    },
+    "change_text_background_color" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change the color of the text background"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "글자 배경 색상 변경"
+          }
+        }
+      }
+    },
+    "change_text_color" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change the color of the letter"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "글자 색상 변경"
+          }
+        }
+      }
+    },
+    "change_text_font" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change the letter font"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "글자 폰트 변경"
+          }
+        }
+      }
+    },
+    "change_text_underiine" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change the letter underiine"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "글자 밑줄 변경"
+          }
+        }
+      }
+    },
     "close" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -184,6 +269,23 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Font style test"
+          }
+        }
+      }
+    },
+    "hilight_input_placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the text in the example to highlight."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "강조할 예제안에 텍스트를 입력하세요."
           }
         }
       }
@@ -337,6 +439,23 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "설정"
+          }
+        }
+      }
+    },
+    "test_button_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "테스트"
           }
         }
       }

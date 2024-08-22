@@ -1,15 +1,15 @@
 //
-//  TypographyCaseView.swift
+//  TypographyStyleView.swift
 //  iOSExample
 //
-//  Created by 10-N3344 on 8/19/24.
+//  Created by 10-N3344 on 8/22/24.
 //
 
 import UIKit
 import SnapKit
 import Then
 
-final class TypographyCaseView: UIView {
+final class TypographyStyleView: UIView {
     
     let tableView = UITableView(frame: .zero, style: .plain).then {
         $0.backgroundColor = UIColor.named(.backgroundColor)
@@ -17,8 +17,8 @@ final class TypographyCaseView: UIView {
         $0.separatorColor = UIColor.named(.borderOpaque)
         $0.separatorInset = .zero
         $0.layoutMargins = .zero
-//        $0.register(ContactsMainHeaderView.self, forHeaderFooterViewReuseIdentifier: ContactsMainHeaderView.identifier)
-        $0.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.identifier)
+        $0.register(BaseTableHeaderView.self, forHeaderFooterViewReuseIdentifier: BaseTableHeaderView.identifier)
+        $0.register(TypographyTextViewCell.self, forCellReuseIdentifier: TypographyTextViewCell.identifier)
         $0.showsVerticalScrollIndicator = true
         if #available(iOS 15.0, *) {
             $0.sectionHeaderTopPadding = .leastNonzeroMagnitude
@@ -28,6 +28,8 @@ final class TypographyCaseView: UIView {
         $0.bounces = false
         $0.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
     }
+    
+    let headerView = TypographyStyleHeaderView()
 
     // MARK: - init()
     override init(frame: CGRect) {
@@ -39,6 +41,10 @@ final class TypographyCaseView: UIView {
         super.traitCollectionDidChange(previousTraitCollection)
 
     }
+
+//    convenience init(frame: CGRect) {
+//        self.init(frame: frame)
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -54,10 +60,11 @@ final class TypographyCaseView: UIView {
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        tableView.tableHeaderView = headerView
     }
 }
 
 // MARK: - extensions
-extension TypographyCaseView {
+extension TypographyStyleView {
     
 }

@@ -1,8 +1,8 @@
 //
-//  TypographyLineHeightViewController.swift
+//  TypographyStyleViewController.swift
 //  iOSExample
 //
-//  Created by 10-N3344 on 8/19/24.
+//  Created by 10-N3344 on 8/22/24.
 //
 
 import UIKit
@@ -10,10 +10,10 @@ import SnapKit
 import Then
 import Combine
 
-final class TypographyLineHeightViewController: BaseViewController {
+final class TypographyStyleViewController: BaseViewController {
     
-    let subViews = TypographyLineHeightView()
-    let viewModel = TypographyLineHeightViewModel()
+    let subViews = TypographyStyleView()
+    let viewModel = TypographyStyleViewModel()
 
     override func loadView() {
         super.loadView()
@@ -30,14 +30,14 @@ final class TypographyLineHeightViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-
+    
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // AnalyticsManager.setScreenName(screenName: Typography, screenClass: TypographyViewController.self)
+        // AnalyticsManager.setScreenName(screenName: TypographyStyle, screenClass: TypographyStyleViewController.self)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -68,24 +68,29 @@ final class TypographyLineHeightViewController: BaseViewController {
     // MARK: - functions
     private func setBinding() {
 
-        subViews.headerInputView.fontSelect.tapItem.sink { [weak self] _ in
+        subViews.headerView.fontSelect.tapItem.sink { [weak self] _ in
             guard let sself = self else { return }
             sself.showFontSelectView()
         }.store(in: &cancellables)
 
-        subViews.headerInputView.boxHeightSelect.tapItem.sink { [weak self] _ in
+        subViews.headerView.boxHeightSelect.tapItem.sink { [weak self] _ in
             guard let sself = self else { return }
             sself.showBoxHegihtSelectView()
         }.store(in: &cancellables)
-        
-        subViews.headerInputView.searchBtn.tapPublisher.sink { [weak self] _ in
+
+        subViews.headerView.searchBtn.tapPublisher.sink { [weak self] _ in
             guard let sself = self else { return }
             sself.viewModel.makeTestData()
         }.store(in: &cancellables)
 
+        subViews.headerView.highlightInput.textPublisher.sink { [weak self] txt in
+            guard let sself = self, let text = txt else { return }
+            sself.viewModel.setHighlightText(text)
+        }.store(in: &cancellables)
+
         viewModel.state.updateUI.sink { [weak self] isEnabled in
             guard let sself = self else { return }
-            sself.subViews.headerInputView.updateUI(sself.viewModel.saveModel, isEnabled: isEnabled)
+            sself.subViews.headerView.updateUI(sself.viewModel.saveModel, isEnabled: isEnabled)
             sself.subViews.tableView.reloadData()
         }.store(in: &cancellables)
 
@@ -93,7 +98,7 @@ final class TypographyLineHeightViewController: BaseViewController {
 
     private func setupUI() {
         view.addSubview(subViews)
-        setNavigationBarTitle("line_height".localization)
+        setNavigationBarTitle("font_style".localization)
 
         subViews.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -105,7 +110,7 @@ final class TypographyLineHeightViewController: BaseViewController {
 }
 
 // MARK: - extensions
-extension TypographyLineHeightViewController {
+extension TypographyStyleViewController {
     func handlerSelectFontSize(_ alert: UIAlertAction) {
         if let selectFont = viewModel.fontLists.filter({ "\($0.fontSize)pt \($0.weight.weightName)" == alert.title }).first {
             viewModel.setFont(selectFont)
@@ -120,9 +125,9 @@ extension TypographyLineHeightViewController {
         }
         self.onActionSheet(title: "",
                            buttons: buttons,
-                           customView: subViews.headerInputView.fontSelect)
+                           customView: subViews.headerView.fontSelect)
     }
-    
+
     func handlerSelectBoxHeight(_ alert: UIAlertAction) {
         if let selectHeight = viewModel.boxSizeLists.filter({ "\($0)" == alert.title }).first {
             viewModel.setBoxSize(selectHeight)
@@ -141,12 +146,16 @@ extension TypographyLineHeightViewController {
         }
         self.onActionSheet(title: "",
                            buttons: buttons,
-                           customView: subViews.headerInputView.fontSelect)
+                           customView: subViews.headerView.fontSelect)
     }
 }
 
+extension TypographyStyleViewController {
+
+}
+
 // MARK: - UITableViewDelegate, UITableViewDataSource
-extension TypographyLineHeightViewController: UITableViewDelegate, UITableViewDataSource {
+extension TypographyStyleViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.sections.count
@@ -154,27 +163,15 @@ extension TypographyLineHeightViewController: UITableViewDelegate, UITableViewDa
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard viewModel.sections.count > section else { return 0 }
-        return viewModel.sections[section].data.count
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard viewModel.sections.count > indexPath.section else { return UITableViewCell() }
-        guard viewModel.sections[indexPath.section].data.count > indexPath.row else { return UITableViewCell() }
-        let font = viewModel.sections[indexPath.section].font
-        let type = viewModel.sections[indexPath.section].type
-        let boxHeight = viewModel.sections[indexPath.section].boxSize
-        let data = viewModel.sections[indexPath.section].data[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TypographyTextViewCell.identifier) as? TypographyTextViewCell else { return UITableViewCell() }
+        cell.updateStyleUI(data: viewModel.sections[indexPath.section])
+        return cell
 
-        switch type {
-        case .label:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TypographyLabelCell.identifier) as? TypographyLabelCell else { return UITableViewCell() }
-            cell.updateUI(data: data, font: font, boxHeight: boxHeight)
-            return cell
-        case .textView:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TypographyTextViewCell.identifier) as? TypographyTextViewCell else { return UITableViewCell() }
-            cell.updateUI(data: data, font: font, boxHeight: boxHeight)
-            return cell
-        }
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -198,10 +195,8 @@ extension TypographyLineHeightViewController: UITableViewDelegate, UITableViewDa
         guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: BaseTableHeaderView.identifier) as? BaseTableHeaderView else {
             return nil
         }
-        // \(fontType.font.familyName)
-        let fontType = viewModel.sections[section].font
-        let type = viewModel.sections[section].type
-        header.updateUI(title: String(format: "font_size_title".localization, fontType.fontSize, type.title))
+        let type = viewModel.sections[section].caseType
+        header.updateUI(title: "\(type.title)")
         return header
     }
 
