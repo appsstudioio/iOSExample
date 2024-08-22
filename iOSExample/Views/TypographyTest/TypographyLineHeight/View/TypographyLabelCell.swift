@@ -88,5 +88,9 @@ extension TypographyLabelCell {
 
         label.attributedText = data.text.toAttributed(fontType: font, color: UIColor.named(.contentSecondary), lineBreakMode: .byCharWrapping)
     }
+
+    func updateCustomFont(data: TypographyCustomFontSectionModel) {
+        label.attributedText = data.data.toAttributed(fontType: data.font, color: UIColor.named(.contentSecondary), lineBreakMode: .byCharWrapping)
+    }
 }
 

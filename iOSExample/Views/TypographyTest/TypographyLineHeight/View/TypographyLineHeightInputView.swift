@@ -26,9 +26,9 @@ final class TypographyLineHeightInputView: UIView {
         $0.setBackgroundColor(UIColor.named(.mainColor), for: .normal)
         $0.setBackgroundColor(UIColor.named(.mainColor).withAlphaComponent(0.5), for: .highlighted)
         $0.setBackgroundColor(UIColor.named(.backgroundDisable), for: .disabled)
-        $0.setAttributedTitle("search".localization.toAttributed(fontType: .r16px, lineHeight: 0, color: UIColor.named(.contentWhite)), for: .normal)
-        $0.setAttributedTitle("search".localization.toAttributed(fontType: .r16px, lineHeight: 0, color: UIColor.named(.contentWhite)), for: .highlighted)
-        $0.setAttributedTitle("search".localization.toAttributed(fontType: .r16px, lineHeight: 0, color: UIColor.named(.contentDisable)), for: .disabled)
+        $0.setAttributedTitle("test_button_title".localization.toAttributed(fontType: .r16px, lineHeight: 0, color: UIColor.named(.contentWhite)), for: .normal)
+        $0.setAttributedTitle("test_button_title".localization.toAttributed(fontType: .r16px, lineHeight: 0, color: UIColor.named(.contentWhite)), for: .highlighted)
+        $0.setAttributedTitle("test_button_title".localization.toAttributed(fontType: .r16px, lineHeight: 0, color: UIColor.named(.contentDisable)), for: .disabled)
         $0.layer.borderWidth = 1
         $0.layer.borderColor = UIColor.clear.cgColor
         $0.layer.cornerRadius = 4

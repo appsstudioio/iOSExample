@@ -33,6 +33,65 @@
 		3E5776512C7343ED002F5350 /* ColorCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5776492C7343ED002F5350 /* ColorCaseModel.swift */; };
 		3E5776522C7343ED002F5350 /* ColorCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57764B2C7343ED002F5350 /* ColorCaseView.swift */; };
 		3E5776532C7343ED002F5350 /* ColorCaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E57764D2C7343ED002F5350 /* ColorCaseViewModel.swift */; };
+		3E5E8F252C76CB8900953B1C /* TypographyStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8F1C2C76CB8900953B1C /* TypographyStyleViewController.swift */; };
+		3E5E8F262C76CB8900953B1C /* TypographyStyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8F1E2C76CB8900953B1C /* TypographyStyleModel.swift */; };
+		3E5E8F272C76CB8900953B1C /* TypographyStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8F202C76CB8900953B1C /* TypographyStyleView.swift */; };
+		3E5E8F282C76CB8900953B1C /* TypographyStyleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8F222C76CB8900953B1C /* TypographyStyleViewModel.swift */; };
+		3E5E8F2A2C76CDFB00953B1C /* TypographyStyleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8F292C76CDFB00953B1C /* TypographyStyleHeaderView.swift */; };
+		3E5E8F732C771D5500953B1C /* MangoDdobak-B.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F2B2C771D5500953B1C /* MangoDdobak-B.otf */; };
+		3E5E8F742C771D5500953B1C /* MangoDdobak-L.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F2C2C771D5500953B1C /* MangoDdobak-L.otf */; };
+		3E5E8F752C771D5500953B1C /* MangoDdobak-R.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F2D2C771D5500953B1C /* MangoDdobak-R.otf */; };
+		3E5E8F762C771D5500953B1C /* IBMPlexSansKR-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F2F2C771D5500953B1C /* IBMPlexSansKR-Bold.ttf */; };
+		3E5E8F772C771D5500953B1C /* IBMPlexSansKR-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F302C771D5500953B1C /* IBMPlexSansKR-Regular.ttf */; };
+		3E5E8F782C771D5500953B1C /* IBMPlexSansKR-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F312C771D5500953B1C /* IBMPlexSansKR-SemiBold.ttf */; };
+		3E5E8F792C771D5500953B1C /* SUIT-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F332C771D5500953B1C /* SUIT-Bold.otf */; };
+		3E5E8F7A2C771D5500953B1C /* SUIT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F342C771D5500953B1C /* SUIT-Regular.otf */; };
+		3E5E8F7B2C771D5500953B1C /* SUIT-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F352C771D5500953B1C /* SUIT-SemiBold.otf */; };
+		3E5E8F7C2C771D5500953B1C /* CookieRun-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F372C771D5500953B1C /* CookieRun-Black.otf */; };
+		3E5E8F7D2C771D5500953B1C /* CookieRun-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F382C771D5500953B1C /* CookieRun-Bold.otf */; };
+		3E5E8F7E2C771D5500953B1C /* CookieRun-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F392C771D5500953B1C /* CookieRun-Regular.otf */; };
+		3E5E8F7F2C771D5500953B1C /* Gaegu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F3B2C771D5500953B1C /* Gaegu-Bold.ttf */; };
+		3E5E8F802C771D5500953B1C /* Gaegu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F3C2C771D5500953B1C /* Gaegu-Light.ttf */; };
+		3E5E8F812C771D5500953B1C /* Gaegu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F3D2C771D5500953B1C /* Gaegu-Regular.ttf */; };
+		3E5E8F852C771D5500953B1C /* WantedSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F432C771D5500953B1C /* WantedSans-Bold.otf */; };
+		3E5E8F862C771D5500953B1C /* WantedSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F442C771D5500953B1C /* WantedSans-Regular.otf */; };
+		3E5E8F872C771D5500953B1C /* WantedSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F452C771D5500953B1C /* WantedSans-SemiBold.otf */; };
+		3E5E8F8B2C771D5500953B1C /* GothicA1-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F4B2C771D5500953B1C /* GothicA1-Bold.ttf */; };
+		3E5E8F8C2C771D5500953B1C /* GothicA1-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F4C2C771D5500953B1C /* GothicA1-Regular.ttf */; };
+		3E5E8F8D2C771D5500953B1C /* GothicA1-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F4D2C771D5500953B1C /* GothicA1-SemiBold.ttf */; };
+		3E5E8F8E2C771D5500953B1C /* Hahmlet-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F4F2C771D5500953B1C /* Hahmlet-Bold.ttf */; };
+		3E5E8F8F2C771D5500953B1C /* Hahmlet-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F502C771D5500953B1C /* Hahmlet-Regular.ttf */; };
+		3E5E8F902C771D5500953B1C /* Hahmlet-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F512C771D5500953B1C /* Hahmlet-SemiBold.ttf */; };
+		3E5E8F912C771D5500953B1C /* DdangFontsOTF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F532C771D5500953B1C /* DdangFontsOTF-Bold.otf */; };
+		3E5E8F922C771D5500953B1C /* DdangFontsOTF-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F542C771D5500953B1C /* DdangFontsOTF-Light.otf */; };
+		3E5E8F932C771D5500953B1C /* DdangFontsOTF-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F552C771D5500953B1C /* DdangFontsOTF-Medium.otf */; };
+		3E5E8F942C771D5500953B1C /* Interop-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F572C771D5500953B1C /* Interop-Bold.otf */; };
+		3E5E8F952C771D5500953B1C /* Interop-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F582C771D5500953B1C /* Interop-Regular.otf */; };
+		3E5E8F962C771D5500953B1C /* Interop-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F592C771D5500953B1C /* Interop-SemiBold.otf */; };
+		3E5E8F972C771D5500953B1C /* MoveSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F5B2C771D5500953B1C /* MoveSans-Bold.otf */; };
+		3E5E8F982C771D5500953B1C /* MoveSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F5C2C771D5500953B1C /* MoveSans-Light.otf */; };
+		3E5E8F992C771D5500953B1C /* MoveSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F5D2C771D5500953B1C /* MoveSans-Medium.otf */; };
+		3E5E8F9A2C771D5500953B1C /* Dongle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F5F2C771D5500953B1C /* Dongle-Bold.ttf */; };
+		3E5E8F9B2C771D5500953B1C /* Dongle-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F602C771D5500953B1C /* Dongle-Light.ttf */; };
+		3E5E8F9C2C771D5500953B1C /* Dongle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F612C771D5500953B1C /* Dongle-Regular.ttf */; };
+		3E5E8F9D2C771D5500953B1C /* LINESeedKR-Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F632C771D5500953B1C /* LINESeedKR-Bd.otf */; };
+		3E5E8F9E2C771D5500953B1C /* LINESeedKR-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F642C771D5500953B1C /* LINESeedKR-Rg.otf */; };
+		3E5E8F9F2C771D5500953B1C /* LINESeedKR-Th.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F652C771D5500953B1C /* LINESeedKR-Th.otf */; };
+		3E5E8FA02C771D5500953B1C /* SCDream-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F672C771D5500953B1C /* SCDream-Bold.otf */; };
+		3E5E8FA12C771D5500953B1C /* SCDream-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F682C771D5500953B1C /* SCDream-Regular.otf */; };
+		3E5E8FA22C771D5500953B1C /* SCDream-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F692C771D5500953B1C /* SCDream-SemiBold.otf */; };
+		3E5E8FA32C771D5500953B1C /* Freesentation-4Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F6B2C771D5500953B1C /* Freesentation-4Regular.ttf */; };
+		3E5E8FA42C771D5500953B1C /* Freesentation-6SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F6C2C771D5500953B1C /* Freesentation-6SemiBold.ttf */; };
+		3E5E8FA52C771D5500953B1C /* Freesentation-7Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F6D2C771D5500953B1C /* Freesentation-7Bold.ttf */; };
+		3E5E8FA62C771D5500953B1C /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F6F2C771D5500953B1C /* Pretendard-Bold.otf */; };
+		3E5E8FA72C771D5500953B1C /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F702C771D5500953B1C /* Pretendard-Regular.otf */; };
+		3E5E8FA82C771D5500953B1C /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8F712C771D5500953B1C /* Pretendard-SemiBold.otf */; };
+		3E5E8FAB2C7734AF00953B1C /* SharedPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8FAA2C7734AF00953B1C /* SharedPreference.swift */; };
+		3E5E8FB72C7736DE00953B1C /* TypographyCustomFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8FAE2C7736DE00953B1C /* TypographyCustomFontViewController.swift */; };
+		3E5E8FB82C7736DE00953B1C /* TypographyCustomFontModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8FB02C7736DE00953B1C /* TypographyCustomFontModel.swift */; };
+		3E5E8FB92C7736DE00953B1C /* TypographyCustomFontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8FB22C7736DE00953B1C /* TypographyCustomFontView.swift */; };
+		3E5E8FBA2C7736DE00953B1C /* TypographyCustomFontViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8FB42C7736DE00953B1C /* TypographyCustomFontViewModel.swift */; };
+		3E5E8FBC2C77382600953B1C /* TypographyCustomFontHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8FBB2C77382600953B1C /* TypographyCustomFontHeaderView.swift */; };
 		3E6707B72C7454B400F7FEC4 /* TypographyLineHeightInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6707B62C7454B400F7FEC4 /* TypographyLineHeightInputView.swift */; };
 		3E6707B92C74581C00F7FEC4 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6707B82C74581C00F7FEC4 /* BaseTextField.swift */; };
 		3EB101E62C6C3E5600E151F0 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB101E52C6C3E5600E151F0 /* CommonFunctions.swift */; };
@@ -112,6 +171,65 @@
 		3E5776492C7343ED002F5350 /* ColorCaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCaseModel.swift; sourceTree = "<group>"; };
 		3E57764B2C7343ED002F5350 /* ColorCaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCaseView.swift; sourceTree = "<group>"; };
 		3E57764D2C7343ED002F5350 /* ColorCaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCaseViewModel.swift; sourceTree = "<group>"; };
+		3E5E8F1C2C76CB8900953B1C /* TypographyStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyStyleViewController.swift; sourceTree = "<group>"; };
+		3E5E8F1E2C76CB8900953B1C /* TypographyStyleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyStyleModel.swift; sourceTree = "<group>"; };
+		3E5E8F202C76CB8900953B1C /* TypographyStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyStyleView.swift; sourceTree = "<group>"; };
+		3E5E8F222C76CB8900953B1C /* TypographyStyleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyStyleViewModel.swift; sourceTree = "<group>"; };
+		3E5E8F292C76CDFB00953B1C /* TypographyStyleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyStyleHeaderView.swift; sourceTree = "<group>"; };
+		3E5E8F2B2C771D5500953B1C /* MangoDdobak-B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MangoDdobak-B.otf"; sourceTree = "<group>"; };
+		3E5E8F2C2C771D5500953B1C /* MangoDdobak-L.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MangoDdobak-L.otf"; sourceTree = "<group>"; };
+		3E5E8F2D2C771D5500953B1C /* MangoDdobak-R.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MangoDdobak-R.otf"; sourceTree = "<group>"; };
+		3E5E8F2F2C771D5500953B1C /* IBMPlexSansKR-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSansKR-Bold.ttf"; sourceTree = "<group>"; };
+		3E5E8F302C771D5500953B1C /* IBMPlexSansKR-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSansKR-Regular.ttf"; sourceTree = "<group>"; };
+		3E5E8F312C771D5500953B1C /* IBMPlexSansKR-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSansKR-SemiBold.ttf"; sourceTree = "<group>"; };
+		3E5E8F332C771D5500953B1C /* SUIT-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Bold.otf"; sourceTree = "<group>"; };
+		3E5E8F342C771D5500953B1C /* SUIT-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Regular.otf"; sourceTree = "<group>"; };
+		3E5E8F352C771D5500953B1C /* SUIT-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.otf"; sourceTree = "<group>"; };
+		3E5E8F372C771D5500953B1C /* CookieRun-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CookieRun-Black.otf"; sourceTree = "<group>"; };
+		3E5E8F382C771D5500953B1C /* CookieRun-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CookieRun-Bold.otf"; sourceTree = "<group>"; };
+		3E5E8F392C771D5500953B1C /* CookieRun-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CookieRun-Regular.otf"; sourceTree = "<group>"; };
+		3E5E8F3B2C771D5500953B1C /* Gaegu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaegu-Bold.ttf"; sourceTree = "<group>"; };
+		3E5E8F3C2C771D5500953B1C /* Gaegu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaegu-Light.ttf"; sourceTree = "<group>"; };
+		3E5E8F3D2C771D5500953B1C /* Gaegu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaegu-Regular.ttf"; sourceTree = "<group>"; };
+		3E5E8F432C771D5500953B1C /* WantedSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WantedSans-Bold.otf"; sourceTree = "<group>"; };
+		3E5E8F442C771D5500953B1C /* WantedSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WantedSans-Regular.otf"; sourceTree = "<group>"; };
+		3E5E8F452C771D5500953B1C /* WantedSans-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WantedSans-SemiBold.otf"; sourceTree = "<group>"; };
+		3E5E8F4B2C771D5500953B1C /* GothicA1-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothicA1-Bold.ttf"; sourceTree = "<group>"; };
+		3E5E8F4C2C771D5500953B1C /* GothicA1-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothicA1-Regular.ttf"; sourceTree = "<group>"; };
+		3E5E8F4D2C771D5500953B1C /* GothicA1-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothicA1-SemiBold.ttf"; sourceTree = "<group>"; };
+		3E5E8F4F2C771D5500953B1C /* Hahmlet-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hahmlet-Bold.ttf"; sourceTree = "<group>"; };
+		3E5E8F502C771D5500953B1C /* Hahmlet-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hahmlet-Regular.ttf"; sourceTree = "<group>"; };
+		3E5E8F512C771D5500953B1C /* Hahmlet-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hahmlet-SemiBold.ttf"; sourceTree = "<group>"; };
+		3E5E8F532C771D5500953B1C /* DdangFontsOTF-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DdangFontsOTF-Bold.otf"; sourceTree = "<group>"; };
+		3E5E8F542C771D5500953B1C /* DdangFontsOTF-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DdangFontsOTF-Light.otf"; sourceTree = "<group>"; };
+		3E5E8F552C771D5500953B1C /* DdangFontsOTF-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DdangFontsOTF-Medium.otf"; sourceTree = "<group>"; };
+		3E5E8F572C771D5500953B1C /* Interop-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Interop-Bold.otf"; sourceTree = "<group>"; };
+		3E5E8F582C771D5500953B1C /* Interop-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Interop-Regular.otf"; sourceTree = "<group>"; };
+		3E5E8F592C771D5500953B1C /* Interop-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Interop-SemiBold.otf"; sourceTree = "<group>"; };
+		3E5E8F5B2C771D5500953B1C /* MoveSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MoveSans-Bold.otf"; sourceTree = "<group>"; };
+		3E5E8F5C2C771D5500953B1C /* MoveSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MoveSans-Light.otf"; sourceTree = "<group>"; };
+		3E5E8F5D2C771D5500953B1C /* MoveSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MoveSans-Medium.otf"; sourceTree = "<group>"; };
+		3E5E8F5F2C771D5500953B1C /* Dongle-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Bold.ttf"; sourceTree = "<group>"; };
+		3E5E8F602C771D5500953B1C /* Dongle-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Light.ttf"; sourceTree = "<group>"; };
+		3E5E8F612C771D5500953B1C /* Dongle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Regular.ttf"; sourceTree = "<group>"; };
+		3E5E8F632C771D5500953B1C /* LINESeedKR-Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Bd.otf"; sourceTree = "<group>"; };
+		3E5E8F642C771D5500953B1C /* LINESeedKR-Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Rg.otf"; sourceTree = "<group>"; };
+		3E5E8F652C771D5500953B1C /* LINESeedKR-Th.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Th.otf"; sourceTree = "<group>"; };
+		3E5E8F672C771D5500953B1C /* SCDream-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SCDream-Bold.otf"; sourceTree = "<group>"; };
+		3E5E8F682C771D5500953B1C /* SCDream-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SCDream-Regular.otf"; sourceTree = "<group>"; };
+		3E5E8F692C771D5500953B1C /* SCDream-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SCDream-SemiBold.otf"; sourceTree = "<group>"; };
+		3E5E8F6B2C771D5500953B1C /* Freesentation-4Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Freesentation-4Regular.ttf"; sourceTree = "<group>"; };
+		3E5E8F6C2C771D5500953B1C /* Freesentation-6SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Freesentation-6SemiBold.ttf"; sourceTree = "<group>"; };
+		3E5E8F6D2C771D5500953B1C /* Freesentation-7Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Freesentation-7Bold.ttf"; sourceTree = "<group>"; };
+		3E5E8F6F2C771D5500953B1C /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		3E5E8F702C771D5500953B1C /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		3E5E8F712C771D5500953B1C /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		3E5E8FAA2C7734AF00953B1C /* SharedPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPreference.swift; sourceTree = "<group>"; };
+		3E5E8FAE2C7736DE00953B1C /* TypographyCustomFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyCustomFontViewController.swift; sourceTree = "<group>"; };
+		3E5E8FB02C7736DE00953B1C /* TypographyCustomFontModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyCustomFontModel.swift; sourceTree = "<group>"; };
+		3E5E8FB22C7736DE00953B1C /* TypographyCustomFontView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyCustomFontView.swift; sourceTree = "<group>"; };
+		3E5E8FB42C7736DE00953B1C /* TypographyCustomFontViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyCustomFontViewModel.swift; sourceTree = "<group>"; };
+		3E5E8FBB2C77382600953B1C /* TypographyCustomFontHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyCustomFontHeaderView.swift; sourceTree = "<group>"; };
 		3E6707B62C7454B400F7FEC4 /* TypographyLineHeightInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyLineHeightInputView.swift; sourceTree = "<group>"; };
 		3E6707B82C74581C00F7FEC4 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		3EB101E52C6C3E5600E151F0 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
@@ -232,6 +350,8 @@
 		3E5776042C730CC6002F5350 /* TypographyTest */ = {
 			isa = PBXGroup;
 			children = (
+				3E5E8FB62C7736DE00953B1C /* TypographyCustomFont */,
+				3E5E8F242C76CB8900953B1C /* TypographyStyle */,
 				3E5776402C7342DE002F5350 /* TypographyLineHeight */,
 				3E5776312C73429C002F5350 /* TypographyCase */,
 			);
@@ -431,6 +551,262 @@
 			path = ColorCase;
 			sourceTree = "<group>";
 		};
+		3E5E8F1D2C76CB8900953B1C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F1C2C76CB8900953B1C /* TypographyStyleViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3E5E8F1F2C76CB8900953B1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F1E2C76CB8900953B1C /* TypographyStyleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E5E8F212C76CB8900953B1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F202C76CB8900953B1C /* TypographyStyleView.swift */,
+				3E5E8F292C76CDFB00953B1C /* TypographyStyleHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E5E8F232C76CB8900953B1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F222C76CB8900953B1C /* TypographyStyleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3E5E8F242C76CB8900953B1C /* TypographyStyle */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F232C76CB8900953B1C /* ViewModel */,
+				3E5E8F1D2C76CB8900953B1C /* Controller */,
+				3E5E8F1F2C76CB8900953B1C /* Model */,
+				3E5E8F212C76CB8900953B1C /* View */,
+			);
+			path = TypographyStyle;
+			sourceTree = "<group>";
+		};
+		3E5E8F2E2C771D5500953B1C /* MangoDdobak */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F2B2C771D5500953B1C /* MangoDdobak-B.otf */,
+				3E5E8F2C2C771D5500953B1C /* MangoDdobak-L.otf */,
+				3E5E8F2D2C771D5500953B1C /* MangoDdobak-R.otf */,
+			);
+			path = MangoDdobak;
+			sourceTree = "<group>";
+		};
+		3E5E8F322C771D5500953B1C /* IBMPlexSansKR */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F2F2C771D5500953B1C /* IBMPlexSansKR-Bold.ttf */,
+				3E5E8F302C771D5500953B1C /* IBMPlexSansKR-Regular.ttf */,
+				3E5E8F312C771D5500953B1C /* IBMPlexSansKR-SemiBold.ttf */,
+			);
+			path = IBMPlexSansKR;
+			sourceTree = "<group>";
+		};
+		3E5E8F362C771D5500953B1C /* SUIT */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F332C771D5500953B1C /* SUIT-Bold.otf */,
+				3E5E8F342C771D5500953B1C /* SUIT-Regular.otf */,
+				3E5E8F352C771D5500953B1C /* SUIT-SemiBold.otf */,
+			);
+			path = SUIT;
+			sourceTree = "<group>";
+		};
+		3E5E8F3A2C771D5500953B1C /* CookieRunFont */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F372C771D5500953B1C /* CookieRun-Black.otf */,
+				3E5E8F382C771D5500953B1C /* CookieRun-Bold.otf */,
+				3E5E8F392C771D5500953B1C /* CookieRun-Regular.otf */,
+			);
+			path = CookieRunFont;
+			sourceTree = "<group>";
+		};
+		3E5E8F3E2C771D5500953B1C /* Gaegu */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F3B2C771D5500953B1C /* Gaegu-Bold.ttf */,
+				3E5E8F3C2C771D5500953B1C /* Gaegu-Light.ttf */,
+				3E5E8F3D2C771D5500953B1C /* Gaegu-Regular.ttf */,
+			);
+			path = Gaegu;
+			sourceTree = "<group>";
+		};
+		3E5E8F462C771D5500953B1C /* WantedSans */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F432C771D5500953B1C /* WantedSans-Bold.otf */,
+				3E5E8F442C771D5500953B1C /* WantedSans-Regular.otf */,
+				3E5E8F452C771D5500953B1C /* WantedSans-SemiBold.otf */,
+			);
+			path = WantedSans;
+			sourceTree = "<group>";
+		};
+		3E5E8F4E2C771D5500953B1C /* GothicA1 */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F4B2C771D5500953B1C /* GothicA1-Bold.ttf */,
+				3E5E8F4C2C771D5500953B1C /* GothicA1-Regular.ttf */,
+				3E5E8F4D2C771D5500953B1C /* GothicA1-SemiBold.ttf */,
+			);
+			path = GothicA1;
+			sourceTree = "<group>";
+		};
+		3E5E8F522C771D5500953B1C /* Hahmlet */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F4F2C771D5500953B1C /* Hahmlet-Bold.ttf */,
+				3E5E8F502C771D5500953B1C /* Hahmlet-Regular.ttf */,
+				3E5E8F512C771D5500953B1C /* Hahmlet-SemiBold.ttf */,
+			);
+			path = Hahmlet;
+			sourceTree = "<group>";
+		};
+		3E5E8F562C771D5500953B1C /* DdangFonts */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F532C771D5500953B1C /* DdangFontsOTF-Bold.otf */,
+				3E5E8F542C771D5500953B1C /* DdangFontsOTF-Light.otf */,
+				3E5E8F552C771D5500953B1C /* DdangFontsOTF-Medium.otf */,
+			);
+			path = DdangFonts;
+			sourceTree = "<group>";
+		};
+		3E5E8F5A2C771D5500953B1C /* Interop */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F572C771D5500953B1C /* Interop-Bold.otf */,
+				3E5E8F582C771D5500953B1C /* Interop-Regular.otf */,
+				3E5E8F592C771D5500953B1C /* Interop-SemiBold.otf */,
+			);
+			path = Interop;
+			sourceTree = "<group>";
+		};
+		3E5E8F5E2C771D5500953B1C /* MoveSans */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F5B2C771D5500953B1C /* MoveSans-Bold.otf */,
+				3E5E8F5C2C771D5500953B1C /* MoveSans-Light.otf */,
+				3E5E8F5D2C771D5500953B1C /* MoveSans-Medium.otf */,
+			);
+			path = MoveSans;
+			sourceTree = "<group>";
+		};
+		3E5E8F622C771D5500953B1C /* Dongle */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F5F2C771D5500953B1C /* Dongle-Bold.ttf */,
+				3E5E8F602C771D5500953B1C /* Dongle-Light.ttf */,
+				3E5E8F612C771D5500953B1C /* Dongle-Regular.ttf */,
+			);
+			path = Dongle;
+			sourceTree = "<group>";
+		};
+		3E5E8F662C771D5500953B1C /* LINE_SeedKR */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F632C771D5500953B1C /* LINESeedKR-Bd.otf */,
+				3E5E8F642C771D5500953B1C /* LINESeedKR-Rg.otf */,
+				3E5E8F652C771D5500953B1C /* LINESeedKR-Th.otf */,
+			);
+			path = LINE_SeedKR;
+			sourceTree = "<group>";
+		};
+		3E5E8F6A2C771D5500953B1C /* SCDream */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F672C771D5500953B1C /* SCDream-Bold.otf */,
+				3E5E8F682C771D5500953B1C /* SCDream-Regular.otf */,
+				3E5E8F692C771D5500953B1C /* SCDream-SemiBold.otf */,
+			);
+			path = SCDream;
+			sourceTree = "<group>";
+		};
+		3E5E8F6E2C771D5500953B1C /* Freesentation */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F6B2C771D5500953B1C /* Freesentation-4Regular.ttf */,
+				3E5E8F6C2C771D5500953B1C /* Freesentation-6SemiBold.ttf */,
+				3E5E8F6D2C771D5500953B1C /* Freesentation-7Bold.ttf */,
+			);
+			path = Freesentation;
+			sourceTree = "<group>";
+		};
+		3E5E8F722C771D5500953B1C /* Pretendard */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8F6F2C771D5500953B1C /* Pretendard-Bold.otf */,
+				3E5E8F702C771D5500953B1C /* Pretendard-Regular.otf */,
+				3E5E8F712C771D5500953B1C /* Pretendard-SemiBold.otf */,
+			);
+			path = Pretendard;
+			sourceTree = "<group>";
+		};
+		3E5E8FA92C77349000953B1C /* SharedPreference */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8FAA2C7734AF00953B1C /* SharedPreference.swift */,
+			);
+			path = SharedPreference;
+			sourceTree = "<group>";
+		};
+		3E5E8FAF2C7736DE00953B1C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8FAE2C7736DE00953B1C /* TypographyCustomFontViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3E5E8FB12C7736DE00953B1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8FB02C7736DE00953B1C /* TypographyCustomFontModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E5E8FB32C7736DE00953B1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8FB22C7736DE00953B1C /* TypographyCustomFontView.swift */,
+				3E5E8FBB2C77382600953B1C /* TypographyCustomFontHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E5E8FB52C7736DE00953B1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8FB42C7736DE00953B1C /* TypographyCustomFontViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3E5E8FB62C7736DE00953B1C /* TypographyCustomFont */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E8FB52C7736DE00953B1C /* ViewModel */,
+				3E5E8FAF2C7736DE00953B1C /* Controller */,
+				3E5E8FB12C7736DE00953B1C /* Model */,
+				3E5E8FB32C7736DE00953B1C /* View */,
+			);
+			path = TypographyCustomFont;
+			sourceTree = "<group>";
+		};
 		3EB101F42C6C8AAF00E151F0 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +831,22 @@
 		3EB102022C6C9D9900E151F0 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				3E5E8F3A2C771D5500953B1C /* CookieRunFont */,
+				3E5E8F562C771D5500953B1C /* DdangFonts */,
+				3E5E8F622C771D5500953B1C /* Dongle */,
+				3E5E8F6E2C771D5500953B1C /* Freesentation */,
+				3E5E8F3E2C771D5500953B1C /* Gaegu */,
+				3E5E8F4E2C771D5500953B1C /* GothicA1 */,
+				3E5E8F522C771D5500953B1C /* Hahmlet */,
+				3E5E8F322C771D5500953B1C /* IBMPlexSansKR */,
+				3E5E8F5A2C771D5500953B1C /* Interop */,
+				3E5E8F662C771D5500953B1C /* LINE_SeedKR */,
+				3E5E8F2E2C771D5500953B1C /* MangoDdobak */,
+				3E5E8F5E2C771D5500953B1C /* MoveSans */,
+				3E5E8F722C771D5500953B1C /* Pretendard */,
+				3E5E8F6A2C771D5500953B1C /* SCDream */,
+				3E5E8F362C771D5500953B1C /* SUIT */,
+				3E5E8F462C771D5500953B1C /* WantedSans */,
 				3EB102082C6CA03A00E151F0 /* ComponentFont.swift */,
 			);
 			path = Font;
@@ -522,11 +914,12 @@
 		5BE4E60D299A35FE000F3744 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				3E57761E2C7318DE002F5350 /* BaseViews */,
-				3E5775F42C72E185002F5350 /* BaseViewModel */,
 				5BE4E620299A35FE000F3744 /* BaseControllers */,
+				3E5775F42C72E185002F5350 /* BaseViewModel */,
+				3E57761E2C7318DE002F5350 /* BaseViews */,
 				3EB101F92C6C8D0100E151F0 /* Extensions */,
 				3EB101F42C6C8AAF00E151F0 /* Functions */,
+				3E5E8FA92C77349000953B1C /* SharedPreference */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -714,13 +1107,61 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5E8F9E2C771D5500953B1C /* LINESeedKR-Rg.otf in Resources */,
+				3E5E8FA02C771D5500953B1C /* SCDream-Bold.otf in Resources */,
+				3E5E8FA82C771D5500953B1C /* Pretendard-SemiBold.otf in Resources */,
 				5BE4E63B299A364D000F3744 /* GoogleService-Info-Dev.plist in Resources */,
+				3E5E8F7C2C771D5500953B1C /* CookieRun-Black.otf in Resources */,
+				3E5E8F8E2C771D5500953B1C /* Hahmlet-Bold.ttf in Resources */,
+				3E5E8F862C771D5500953B1C /* WantedSans-Regular.otf in Resources */,
 				5BC5C25E2999CFB500A9B338 /* Assets.xcassets in Resources */,
 				3EB102072C6C9DE700E151F0 /* Color.xcassets in Resources */,
+				3E5E8F782C771D5500953B1C /* IBMPlexSansKR-SemiBold.ttf in Resources */,
+				3E5E8F7F2C771D5500953B1C /* Gaegu-Bold.ttf in Resources */,
 				3E57761D2C7310B1002F5350 /* LaunchScreen.storyboard in Resources */,
+				3E5E8F792C771D5500953B1C /* SUIT-Bold.otf in Resources */,
+				3E5E8F962C771D5500953B1C /* Interop-SemiBold.otf in Resources */,
+				3E5E8F8C2C771D5500953B1C /* GothicA1-Regular.ttf in Resources */,
+				3E5E8F8B2C771D5500953B1C /* GothicA1-Bold.ttf in Resources */,
+				3E5E8F932C771D5500953B1C /* DdangFontsOTF-Medium.otf in Resources */,
 				5BE4E63C299A364D000F3744 /* GoogleService-Info.plist in Resources */,
+				3E5E8F9F2C771D5500953B1C /* LINESeedKR-Th.otf in Resources */,
+				3E5E8F762C771D5500953B1C /* IBMPlexSansKR-Bold.ttf in Resources */,
+				3E5E8F742C771D5500953B1C /* MangoDdobak-L.otf in Resources */,
+				3E5E8F812C771D5500953B1C /* Gaegu-Regular.ttf in Resources */,
+				3E5E8FA52C771D5500953B1C /* Freesentation-7Bold.ttf in Resources */,
+				3E5E8FA62C771D5500953B1C /* Pretendard-Bold.otf in Resources */,
+				3E5E8F992C771D5500953B1C /* MoveSans-Medium.otf in Resources */,
+				3E5E8F9C2C771D5500953B1C /* Dongle-Regular.ttf in Resources */,
+				3E5E8F7B2C771D5500953B1C /* SUIT-SemiBold.otf in Resources */,
+				3E5E8F982C771D5500953B1C /* MoveSans-Light.otf in Resources */,
+				3E5E8F802C771D5500953B1C /* Gaegu-Light.ttf in Resources */,
+				3E5E8F9B2C771D5500953B1C /* Dongle-Light.ttf in Resources */,
+				3E5E8FA42C771D5500953B1C /* Freesentation-6SemiBold.ttf in Resources */,
+				3E5E8F852C771D5500953B1C /* WantedSans-Bold.otf in Resources */,
+				3E5E8F902C771D5500953B1C /* Hahmlet-SemiBold.ttf in Resources */,
+				3E5E8F942C771D5500953B1C /* Interop-Bold.otf in Resources */,
+				3E5E8FA72C771D5500953B1C /* Pretendard-Regular.otf in Resources */,
+				3E5E8F912C771D5500953B1C /* DdangFontsOTF-Bold.otf in Resources */,
 				3E5776192C73105B002F5350 /* Localizable.xcstrings in Resources */,
+				3E5E8F8F2C771D5500953B1C /* Hahmlet-Regular.ttf in Resources */,
+				3E5E8F952C771D5500953B1C /* Interop-Regular.otf in Resources */,
+				3E5E8F732C771D5500953B1C /* MangoDdobak-B.otf in Resources */,
+				3E5E8F922C771D5500953B1C /* DdangFontsOTF-Light.otf in Resources */,
+				3E5E8F972C771D5500953B1C /* MoveSans-Bold.otf in Resources */,
+				3E5E8F8D2C771D5500953B1C /* GothicA1-SemiBold.ttf in Resources */,
+				3E5E8F7E2C771D5500953B1C /* CookieRun-Regular.otf in Resources */,
+				3E5E8F752C771D5500953B1C /* MangoDdobak-R.otf in Resources */,
 				5BC772F9299B7E0900413D76 /* RemoteConfigDefaults.plist in Resources */,
+				3E5E8F9A2C771D5500953B1C /* Dongle-Bold.ttf in Resources */,
+				3E5E8FA32C771D5500953B1C /* Freesentation-4Regular.ttf in Resources */,
+				3E5E8FA12C771D5500953B1C /* SCDream-Regular.otf in Resources */,
+				3E5E8F9D2C771D5500953B1C /* LINESeedKR-Bd.otf in Resources */,
+				3E5E8F7A2C771D5500953B1C /* SUIT-Regular.otf in Resources */,
+				3E5E8FA22C771D5500953B1C /* SCDream-SemiBold.otf in Resources */,
+				3E5E8F7D2C771D5500953B1C /* CookieRun-Bold.otf in Resources */,
+				3E5E8F872C771D5500953B1C /* WantedSans-SemiBold.otf in Resources */,
+				3E5E8F772C771D5500953B1C /* IBMPlexSansKR-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,12 +1189,18 @@
 				5BE4E638299A35FE000F3744 /* BaseNavigationController.swift in Sources */,
 				3E5776502C7343ED002F5350 /* ColorCaseViewController.swift in Sources */,
 				3E6707B92C74581C00F7FEC4 /* BaseTextField.swift in Sources */,
+				3E5E8F252C76CB8900953B1C /* TypographyStyleViewController.swift in Sources */,
 				3EB101FB2C6C8DB000E151F0 /* UIViewController+Extension.swift in Sources */,
 				3EB102092C6CA03A00E151F0 /* ComponentFont.swift in Sources */,
+				3E5E8FB72C7736DE00953B1C /* TypographyCustomFontViewController.swift in Sources */,
 				3EB101F82C6C8ADD00E151F0 /* CrashlyticsManager.swift in Sources */,
 				3EB101FF2C6C8FDC00E151F0 /* UINavigationBar+Extension.swift in Sources */,
 				3E5776342C73429C002F5350 /* TypographyCaseView.swift in Sources */,
+				3E5E8FB92C7736DE00953B1C /* TypographyCustomFontView.swift in Sources */,
+				3E5E8FAB2C7734AF00953B1C /* SharedPreference.swift in Sources */,
+				3E5E8F282C76CB8900953B1C /* TypographyStyleViewModel.swift in Sources */,
 				3E5776512C7343ED002F5350 /* ColorCaseModel.swift in Sources */,
+				3E5E8F262C76CB8900953B1C /* TypographyStyleModel.swift in Sources */,
 				3E5776322C73429C002F5350 /* TypographyCaseViewController.swift in Sources */,
 				3E5776412C7342DE002F5350 /* TypographyLineHeightViewController.swift in Sources */,
 				5BE4E636299A35FE000F3744 /* BaseTabBarController.swift in Sources */,
@@ -764,6 +1211,7 @@
 				3E5776222C73260A002F5350 /* TypographyLabelCell.swift in Sources */,
 				3EB102012C6C8FDC00E151F0 /* UITextView+Extension.swift in Sources */,
 				3E5776242C732618002F5350 /* TypographyTextViewCell.swift in Sources */,
+				3E5E8FBA2C7736DE00953B1C /* TypographyCustomFontViewModel.swift in Sources */,
 				3E5776202C732034002F5350 /* BaseTableHeaderView.swift in Sources */,
 				3EB101F72C6C8ADD00E151F0 /* AnalyticsManager.swift in Sources */,
 				3E5776422C7342DE002F5350 /* TypographyLineHeightModel.swift in Sources */,
@@ -776,13 +1224,17 @@
 				3E6707B72C7454B400F7FEC4 /* TypographyLineHeightInputView.swift in Sources */,
 				3E5776442C7342DE002F5350 /* TypographyLineHeightViewModel.swift in Sources */,
 				3EB101E62C6C3E5600E151F0 /* CommonFunctions.swift in Sources */,
+				3E5E8FB82C7736DE00953B1C /* TypographyCustomFontModel.swift in Sources */,
 				3E5776142C730E61002F5350 /* ColorPaletteViewController.swift in Sources */,
 				3E5775F12C72E10A002F5350 /* SplashModel.swift in Sources */,
+				3E5E8FBC2C77382600953B1C /* TypographyCustomFontHeaderView.swift in Sources */,
 				3E5776332C73429C002F5350 /* TypographyCaseModel.swift in Sources */,
 				3EB102002C6C8FDC00E151F0 /* UIApplication+Extension.swift in Sources */,
 				3EB102052C6C9DB700E151F0 /* ComponentColor.swift in Sources */,
 				5BC5C2572999CFB400A9B338 /* SceneDelegate.swift in Sources */,
 				3E5776172C730E61002F5350 /* ColorPaletteViewModel.swift in Sources */,
+				3E5E8F2A2C76CDFB00953B1C /* TypographyStyleHeaderView.swift in Sources */,
+				3E5E8F272C76CB8900953B1C /* TypographyStyleView.swift in Sources */,
 				3E5776532C7343ED002F5350 /* ColorCaseViewModel.swift in Sources */,
 				3E5775F22C72E10A002F5350 /* SplashView.swift in Sources */,
 			);
@@ -952,7 +1404,7 @@
 				DEVELOPMENT_TEAM = A2A7Q9Y38C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSExample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = iOSExample;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -985,7 +1437,7 @@
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSExample/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = iOSExample;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;

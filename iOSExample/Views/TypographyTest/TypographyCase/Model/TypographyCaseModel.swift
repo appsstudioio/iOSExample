@@ -33,7 +33,7 @@ extension TypographyTestCaseType {
         case .attributedString:
             return TypographyStyleViewController()
         case .customFont:
-            return UIViewController()
+            return TypographyCustomFontViewController()
         }
     }
 }

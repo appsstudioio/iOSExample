@@ -188,6 +188,23 @@
         }
       }
     },
+    "cumstom_font_select_placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please select a font"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "폰트를 선택해주세요."
+          }
+        }
+      }
+    },
     "custom_font" : {
       "extractionState" : "manual",
       "localizations" : {

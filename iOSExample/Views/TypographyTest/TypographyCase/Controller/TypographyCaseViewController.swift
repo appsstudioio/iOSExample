@@ -25,6 +25,13 @@ final class TypographyCaseViewController: BaseViewController {
         super.viewDidLoad()
 
         setBinding()
+
+        for family in UIFont.familyNames {
+            print("### : \(family)")
+            for name in UIFont.fontNames(forFamilyName: family) {
+                print(">>> : \(name)")
+            }
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -171,7 +171,6 @@ extension TypographyStyleViewController: UITableViewDelegate, UITableViewDataSou
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TypographyTextViewCell.identifier) as? TypographyTextViewCell else { return UITableViewCell() }
         cell.updateStyleUI(data: viewModel.sections[indexPath.section])
         return cell
-
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

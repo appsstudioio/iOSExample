@@ -28,7 +28,7 @@ class BaseTableHeaderView: UITableViewHeaderFooterView {
 
     private func setupUI() {
         backgroundColor = .clear
-        contentView.backgroundColor = UIColor.named(.mainColor)
+        contentView.backgroundColor = .darkGray // UIColor.named(.mainColor)
 
         let boxView = UIView()
         boxView.backgroundColor = .clear
