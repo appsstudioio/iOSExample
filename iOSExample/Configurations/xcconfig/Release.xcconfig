@@ -9,7 +9,7 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 // App Name
-APP_NAME = iOSExample
+BUNDLE_DISPLAY_NAME = iOSExample
 
 //Bundle ID
 PRODUCT_BUNDLE_IDENTIFIER = io.appsstudio.iOSExample

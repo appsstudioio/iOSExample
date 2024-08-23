@@ -27,7 +27,7 @@ final class TypographyLineHeightView: UIView {
         $0.sectionHeaderHeight = .leastNonzeroMagnitude
         $0.sectionFooterHeight = .leastNonzeroMagnitude
         $0.bounces = false
-        $0.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+        $0.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     let headerInputView = TypographyLineHeightInputView()

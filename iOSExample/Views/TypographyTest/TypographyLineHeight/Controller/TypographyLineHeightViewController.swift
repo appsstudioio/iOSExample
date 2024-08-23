@@ -109,7 +109,6 @@ extension TypographyLineHeightViewController {
     func handlerSelectFontSize(_ alert: UIAlertAction) {
         if let selectFont = viewModel.fontLists.filter({ "\($0.fontSize)pt \($0.weight.weightName)" == alert.title }).first {
             viewModel.setFont(selectFont)
-            subViews.headerInputView.fontSelect.isEnabled = true
         }
     }
 

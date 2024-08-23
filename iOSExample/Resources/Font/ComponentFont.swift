@@ -11,6 +11,339 @@
 import Foundation
 import UIKit
 
+enum ComponentFontCustomFamilyName: String, CaseIterable {
+    case fAmericanTypewriter   = "American Typewriter"
+    case fAppleSDGothicNeo     = "Apple SD Gothic Neo"
+    case fChalkboardSE         = "Chalkboard SE"
+    case fCookieRunOTF         = "CookieRunOTF"
+    case fDamascus             = "Damascus"
+    case fDongle               = "Dongle"
+    case fFreesentation        = "Freesentation"
+    case fGaegu                = "Gaegu"
+    case fGothicA1             = "Gothic A1"
+    case fHahmlet              = "Hahmlet"
+    case fHelveticaNeue        = "Helvetica Neue"
+    case fIBMPlexSansKR        = "IBM Plex Sans KR"
+    case fInterop              = "Interop"
+    case fKohinoorBangla       = "Kohinoor Bangla"
+    case fKohinoorDevanagari   = "Kohinoor Devanagari"
+    case fKohinoorGujarati     = "Kohinoor Gujarati"
+    case fKohinoorTelugu       = "ohinoor Telugu"
+    case fLINESeedSansKR       = "LINE Seed Sans KR"
+    case fMangoDdobak          = "Mango Ddobak"
+    case fMoveSans             = "MoveSans"
+    case fMuktaMahee           = "Mukta Mahee"
+    case fNotoSansKannada      = "Noto Sans Kannada"
+    case fNotoSansMyanmar      = "Noto Sans Myanmar"
+    case fPretendard           = "Pretendard"
+    case fSCoreDream           = "S-Core Dream"
+    case fSUIT                 = "SUIT"
+    case fThonburi             = "Thonburi"
+    case fTtangsbudaejjigaeOTF = "Ttangsbudaejjigae OTF"
+    case fWantedSans           = "Wanted Sans"
+}
+
+extension ComponentFontCustomFamilyName {
+    func fontName(weight: UIFont.Weight) -> ComponentFontCustomFontName {
+        switch self {
+        case .fAmericanTypewriter:
+            switch weight {
+            case .regular  : return .AmericanTypewriter
+            case .semibold : return .AmericanTypewriterSemibold
+            case .bold     : return .AmericanTypewriterBold
+            default        : return .AmericanTypewriter
+            }
+        case .fAppleSDGothicNeo:
+            switch weight {
+            case .regular  : return .AppleSDGothicNeoRegular
+            case .semibold : return .AppleSDGothicNeoSemiBold
+            case .bold     : return .AppleSDGothicNeoBold
+            default        : return .AppleSDGothicNeoRegular
+            }
+        case .fChalkboardSE:
+            switch weight {
+            case .regular  : return .ChalkboardSELight
+            case .semibold : return .ChalkboardSERegular
+            case .bold     : return .ChalkboardSEBold
+            default        : return .ChalkboardSELight
+            }
+        case .fCookieRunOTF:
+            switch weight {
+            case .regular  : return .CookieRunOTFRegular
+            case .semibold : return .CookieRunOTFBold
+            case .bold     : return .CookieRunOTFBlack
+            default        : return .CookieRunOTFRegular
+            }
+        case .fDamascus:
+            switch weight {
+            case .regular  : return .Damascus
+            case .semibold : return .DamascusSemiBold
+            case .bold     : return .DamascusBold
+            default        : return .Damascus
+            }
+        case .fDongle:
+            switch weight {
+            case .regular  : return .DongleRegular
+            case .semibold : return .DongleLight
+            case .bold     : return .DongleBold
+            default        : return .DongleRegular
+            }
+        case .fFreesentation:
+            switch weight {
+            case .regular  : return .Freesentation4Regular
+            case .semibold : return .Freesentation6SemiBold
+            case .bold     : return .Freesentation7Bold
+            default        : return .Freesentation4Regular
+            }
+        case .fGaegu:
+            switch weight {
+            case .regular  : return .GaeguLight
+            case .semibold : return .GaeguRegular
+            case .bold     : return .GaeguBold
+            default        : return .GaeguLight
+            }
+        case .fGothicA1:
+            switch weight {
+            case .regular  : return .GothicA1Regular
+            case .semibold : return .GothicA1SemiBold
+            case .bold     : return .GothicA1Bold
+            default        : return .GothicA1Regular
+            }
+        case .fHahmlet:
+            switch weight {
+            case .regular  : return .HahmletRegular
+            case .semibold : return .HahmletSemiBold
+            case .bold     : return .HahmletBold
+            default        : return .HahmletRegular
+            }
+        case .fHelveticaNeue:
+            switch weight {
+            case .regular  : return .HelveticaNeue
+            case .semibold : return .HelveticaNeueMedium
+            case .bold     : return .HelveticaNeueBold
+            default        : return .HelveticaNeue
+            }
+        case .fIBMPlexSansKR:
+            switch weight {
+            case .regular  : return .IBMPlexSansKRRegular
+            case .semibold : return .IBMPlexSansKRSemiBold
+            case .bold     : return .IBMPlexSansKRBold
+            default        : return .IBMPlexSansKRRegular
+            }
+        case .fInterop:
+            switch weight {
+            case .regular  : return .InteropRegular
+            case .semibold : return .InteropSemiBold
+            case .bold     : return .InteropBold
+            default        : return .InteropRegular
+            }
+        case .fKohinoorBangla:
+            switch weight {
+            case .regular  : return .KohinoorBanglaLight
+            case .semibold : return .KohinoorBanglaRegular
+            case .bold     : return .KohinoorBanglaSemibold
+            default        : return .KohinoorBanglaLight
+            }
+        case .fKohinoorDevanagari:
+            switch weight {
+            case .regular  : return .KohinoorDevanagariLight
+            case .semibold : return .KohinoorDevanagariRegular
+            case .bold     : return .KohinoorDevanagariSemibold
+            default        : return .KohinoorDevanagariLight
+            }
+        case .fKohinoorGujarati:
+            switch weight {
+            case .regular  : return .KohinoorGujaratiLight
+            case .semibold : return .KohinoorGujaratiRegular
+            case .bold     : return .KohinoorGujaratiBold
+            default        : return .KohinoorGujaratiLight
+            }
+        case .fKohinoorTelugu:
+            switch weight {
+            case .regular  : return .KohinoorTeluguLight
+            case .semibold : return .KohinoorTeluguRegular
+            case .bold     : return .KohinoorTeluguMedium
+            default        : return .KohinoorTeluguLight
+            }
+        case .fLINESeedSansKR:
+            switch weight {
+            case .regular  : return .LINESeedSansKRThin
+            case .semibold : return .LINESeedSansKRRegular
+            case .bold     : return .LINESeedSansKRBold
+            default        : return .LINESeedSansKRThin
+            }
+        case .fMangoDdobak:
+            switch weight {
+            case .regular  : return .MangoDdobakL
+            case .semibold : return .MangoDdobakR
+            case .bold     : return .MangoDdobakB
+            default        : return .MangoDdobakL
+            }
+        case .fMoveSans:
+            switch weight {
+            case .regular  : return .MoveSansLight
+            case .semibold : return .MoveSansMedium
+            case .bold     : return .MoveSansBold
+            default        : return .MoveSansLight
+            }
+        case .fMuktaMahee:
+            switch weight {
+            case .regular  : return .MuktaMaheeLight
+            case .semibold : return .MuktaMaheeRegular
+            case .bold     : return .MuktaMaheeBold
+            default        : return .MuktaMaheeLight
+            }
+        case .fNotoSansKannada:
+            switch weight {
+            case .regular  : return .NotoSansKannadaLight
+            case .semibold : return .NotoSansKannadaRegular
+            case .bold     : return .NotoSansKannadaBold
+            default        : return .NotoSansKannadaLight
+            }
+        case .fNotoSansMyanmar:
+            switch weight {
+            case .regular  : return .NotoSansMyanmarLight
+            case .semibold : return .NotoSansMyanmarRegular
+            case .bold     : return .NotoSansMyanmarBold
+            default        : return .NotoSansMyanmarLight
+            }
+        case .fPretendard:
+            switch weight {
+            case .regular  : return .PretendardRegular
+            case .semibold : return .PretendardSemiBold
+            case .bold     : return .PretendardBold
+            default        : return .PretendardRegular
+            }
+        case .fSCoreDream:
+            switch weight {
+            case .regular  : return .SCoreDream4Regular
+            case .semibold : return .SCoreDream6Bold
+            case .bold     : return .SCoreDream7ExtraBold
+            default        : return .SCoreDream4Regular
+            }
+        case .fSUIT:
+            switch weight {
+            case .regular  : return .SUITRegular
+            case .semibold : return .SUITSemiBold
+            case .bold     : return .SUITBold
+            default        : return .SUITRegular
+            }
+        case .fThonburi:
+            switch weight {
+            case .regular  : return .ThonburiLight
+            case .semibold : return .Thonburi
+            case .bold     : return .ThonburiBold
+            default        : return .Thonburi
+            }
+        case .fTtangsbudaejjigaeOTF:
+            switch weight {
+            case .regular  : return .OTTtangsbudaejjigaeL
+            case .semibold : return .OTTtangsbudaejjigaeM
+            case .bold     : return .OTTtangsbudaejjigaeB
+            default        : return .OTTtangsbudaejjigaeL
+            }
+        case .fWantedSans:
+            switch weight {
+            case .regular  : return .WantedSansRegular
+            case .semibold : return .WantedSansSemiBold
+            case .bold     : return .WantedSansBold
+            default        : return .WantedSansRegular
+            }
+        }
+
+    }
+}
+
+enum ComponentFontCustomFontName: String, CaseIterable {
+    case AmericanTypewriter         = "AmericanTypewriter"
+    case AmericanTypewriterSemibold = "AmericanTypewriter-Semibold"
+    case AmericanTypewriterBold     = "AmericanTypewriter-Bold"
+    case AppleSDGothicNeoRegular    = "AppleSDGothicNeo-Regular"
+    case AppleSDGothicNeoSemiBold   = "AppleSDGothicNeo-SemiBold"
+    case AppleSDGothicNeoBold       = "AppleSDGothicNeo-Bold"
+    case ChalkboardSERegular        = "ChalkboardSE-Regular"
+    case ChalkboardSELight          = "ChalkboardSE-Light"
+    case ChalkboardSEBold           = "ChalkboardSE-Bold"
+    case CookieRunOTFRegular        = "CookieRunOTF-Regular"
+    case CookieRunOTFBold           = "CookieRunOTF-Bold"
+    case CookieRunOTFBlack          = "CookieRunOTF-Black"
+    case Damascus                   = "Damascus"
+    case DamascusSemiBold           = "DamascusSemiBold"
+    case DamascusBold               = "DamascusBold"
+    case DongleRegular              = "Dongle-Regular"
+    case DongleLight                = "Dongle-Light"
+    case DongleBold                 = "Dongle-Bold"
+    case Freesentation4Regular      = "Freesentation-4Regular"
+    case Freesentation6SemiBold     = "Freesentation-6SemiBold"
+    case Freesentation7Bold         = "Freesentation-7Bold"
+    case GaeguRegular               = "Gaegu-Regular"
+    case GaeguLight                 = "Gaegu-Light"
+    case GaeguBold                  = "Gaegu-Bold"
+    case GothicA1Regular            = "GothicA1-Regular"
+    case GothicA1SemiBold           = "GothicA1-SemiBold"
+    case GothicA1Bold               = "GothicA1-Bold"
+    case HahmletRegular             = "Hahmlet-Regular"
+    case HahmletSemiBold            = "Hahmlet-SemiBold"
+    case HahmletBold                = "Hahmlet-Bold"
+    case HelveticaNeue              = "HelveticaNeue"
+    case HelveticaNeueMedium        = "HelveticaNeue-Medium"
+    case HelveticaNeueBold          = "HelveticaNeue-Bold"
+    case IBMPlexSansKRRegular       = "IBMPlexSansKR-Regular"
+    case IBMPlexSansKRSemiBold      = "IBMPlexSansKR-SemiBold"
+    case IBMPlexSansKRBold          = "IBMPlexSansKR-Bold"
+    case InteropRegular             = "Interop-Regular"
+    case InteropSemiBold            = "Interop-SemiBold"
+    case InteropBold                = "Interop-Bold"
+    case KohinoorBanglaRegular      = "KohinoorBangla-Regular"
+    case KohinoorBanglaLight        = "KohinoorBangla-Light"
+    case KohinoorBanglaSemibold     = "KohinoorBangla-Semibold"
+    case KohinoorDevanagariRegular  = "KohinoorDevanagari-Regular"
+    case KohinoorDevanagariLight    = "KohinoorDevanagari-Light"
+    case KohinoorDevanagariSemibold = "KohinoorDevanagari-Semibold"
+    case KohinoorGujaratiRegular    = "KohinoorGujarati-Regular"
+    case KohinoorGujaratiLight      = "KohinoorGujarati-Light"
+    case KohinoorGujaratiBold       = "KohinoorGujarati-Bold"
+    case KohinoorTeluguRegular      = "KohinoorTelugu-Regular"
+    case KohinoorTeluguLight        = "KohinoorTelugu-Light"
+    case KohinoorTeluguMedium       = "KohinoorTelugu-Medium"
+    case LINESeedSansKRRegular      = "LINESeedSansKR-Regular"
+    case LINESeedSansKRThin         = "LINESeedSansKR-Thin"
+    case LINESeedSansKRBold         = "LINESeedSansKR-Bold"
+    case MangoDdobakB               = "MangoDdobak-B"
+    case MangoDdobakL               = "MangoDdobak-L"
+    case MangoDdobakR               = "MangoDdobak-R"
+    case MoveSansLight              = "MoveSans-Light"
+    case MoveSansMedium             = "MoveSans-Medium"
+    case MoveSansBold               = "MoveSans-Bold"
+    case MuktaMaheeRegular          = "MuktaMahee-Regular"
+    case MuktaMaheeLight            = "MuktaMahee-Light"
+    case MuktaMaheeBold             = "MuktaMahee-Bold"
+    case NotoSansKannadaRegular     = "NotoSansKannada-Regular"
+    case NotoSansKannadaLight       = "NotoSansKannada-Light"
+    case NotoSansKannadaBold        = "NotoSansKannada-Bold"
+    case NotoSansMyanmarRegular     = "NotoSansMyanmar-Regular"
+    case NotoSansMyanmarLight       = "NotoSansMyanmar-Light"
+    case NotoSansMyanmarBold        = "NotoSansMyanmar-Bold"
+    case PretendardRegular          = "Pretendard-Regular"
+    case PretendardSemiBold         = "Pretendard-SemiBold"
+    case PretendardBold             = "Pretendard-Bold"
+    case SCoreDream4Regular         = "S-CoreDream-4Regular"
+    case SCoreDream6Bold            = "S-CoreDream-6Bold"
+    case SCoreDream7ExtraBold       = "S-CoreDream-7ExtraBold"
+    case SUITRegular                = "SUIT-Regular"
+    case SUITSemiBold               = "SUIT-SemiBold"
+    case SUITBold                   = "SUIT-Bold"
+    case Thonburi                   = "Thonburi"
+    case ThonburiLight              = "Thonburi-Light"
+    case ThonburiBold               = "Thonburi-Bold"
+    case OTTtangsbudaejjigaeL       = "OTTtangsbudaejjigaeL"
+    case OTTtangsbudaejjigaeM       = "OTTtangsbudaejjigaeM"
+    case OTTtangsbudaejjigaeB       = "OTTtangsbudaejjigaeB"
+    case WantedSansRegular          = "WantedSans-Regular"
+    case WantedSansSemiBold         = "WantedSans-SemiBold"
+    case WantedSansBold             = "WantedSans-Bold"
+}
+
 public enum ComponentFont: CaseIterable {
     case r08px, sb08px, b08px
     case r09px, sb09px, b09px
@@ -42,11 +375,24 @@ public enum ComponentFont: CaseIterable {
 }
 
 public extension ComponentFont {
+
     static func font(weight: UIFont.Weight, size: CGFloat) -> UIFont {
+        if let fontFamilyName = SharedPreference.shared.getStringtValue(forKey: .kSettingFontFamilyName),
+           let familyType = ComponentFontCustomFamilyName(rawValue: fontFamilyName) {
+            if let cumstomFont = UIFont.init(name: familyType.fontName(weight:weight).rawValue, size: size) {
+                return cumstomFont
+            }
+        }
         return UIFont.systemFont(ofSize: size, weight: weight)
     }
 
     var font: UIFont {
+        if let fontFamilyName = SharedPreference.shared.getStringtValue(forKey: .kSettingFontFamilyName),
+           let familyType = ComponentFontCustomFamilyName(rawValue: fontFamilyName) {
+            if let cumstomFont = UIFont.init(name: familyType.fontName(weight: self.weight).rawValue, size: self.fontSize) {
+                return cumstomFont
+            }
+        }
         return UIFont.systemFont(ofSize: self.fontSize, weight: self.weight)
     }
 
@@ -121,21 +467,20 @@ public extension ComponentFont {
      */
 
     var fontLineHeight: CGFloat {
-        return ComponentFont.font(weight: self.weight, size: self.fontSize).lineHeight
+        return self.font.lineHeight
     }
 
     var fontAscender: CGFloat {
-        return ComponentFont.font(weight: self.weight, size: self.fontSize).ascender
+        return self.font.ascender
     }
 
     var fontDescender: CGFloat {
-        return ComponentFont.font(weight: self.weight, size: self.fontSize).descender
+        return self.font.descender
     }
     
     var fontLeading: CGFloat {
-        return ComponentFont.font(weight: self.weight, size: self.fontSize).leading
+        return self.font.leading
     }
-
 
     var weight: UIFont.Weight {
         switch self {

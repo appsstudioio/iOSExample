@@ -98,4 +98,35 @@ extension TypographyTextViewCell {
         }
         textView.attributedText = data.text.toAttributed(fontType: font, color: UIColor.named(.contentSecondary), lineBreakMode: .byCharWrapping)
     }
+
+    func updateStyleUI(data: TypographyStyleSectionModel) {
+        let font = data.font
+        let testCase = data.caseType
+        let boxHeight = data.boxSize
+        let highlightText = data.highlightText
+        let attributedText = data.data.toAttributed(fontType: font, color: UIColor.named(.contentSecondary))
+        
+        textView.snp.remakeConstraints {
+            $0.top.bottom.equalToSuperview().inset(12)
+            $0.leading.trailing.equalToSuperview().inset(12)
+            $0.height.greaterThanOrEqualTo(boxHeight)
+        }
+
+        switch testCase {
+        case .changeTextColor:
+            textView.attributedText = attributedText.changeTextColor(color: UIColor.named(.mainColor), text: highlightText)
+        case .changeTextBackgroundColor:
+            textView.attributedText = attributedText.changeTextBackgroundColor(color: UIColor.named(.mainColor), text: highlightText)
+        case .changeTextFont:
+            textView.attributedText = attributedText.changeTextFont(font: UIFont.systemFont(ofSize: data.font.fontSize + 4, weight: .heavy), text: highlightText)
+        case .changeTextUnderLine:
+            textView.attributedText = attributedText.changeTextUnderLine(text: highlightText)
+//        case .changeParagraphStyle:
+//            let paragraph = NSMutableParagraphStyle()
+//            paragraph.firstLineHeadIndent = 20
+//            paragraph.minimumLineHeight = CGFloat(boxHeight)
+//            paragraph.maximumLineHeight = CGFloat(boxHeight)
+//            textView.attributedText = attributedText.changeParagraphStyle(style: paragraph, text: data.data)
+        }
+    }
 }

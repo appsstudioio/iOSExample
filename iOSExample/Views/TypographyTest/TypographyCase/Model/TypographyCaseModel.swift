@@ -31,9 +31,9 @@ extension TypographyTestCaseType {
         case .lineHeight:
             return TypographyLineHeightViewController()
         case .attributedString:
-            return UIViewController()
+            return TypographyStyleViewController()
         case .customFont:
-            return UIViewController()
+            return TypographyCustomFontViewController()
         }
     }
 }
