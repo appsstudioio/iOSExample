@@ -31,10 +31,15 @@ class BaseNavigationController: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setNavigation()
         interactivePopGestureRecognizer?.delegate = self
         delegate = self
     }
     
+    private func setNavigation(){
+        self.navigationBar.setDefaultNavigationBarStyle()
+    }
+
     deinit {
         delegate = nil
         interactivePopGestureRecognizer?.delegate = nil
@@ -46,7 +51,6 @@ class BaseNavigationController: UINavigationController {
 extension BaseNavigationController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         guard let navigation = navigationController as? BaseNavigationController else { return }
-
         navigation.duringPushAnimation = false
     }
 }

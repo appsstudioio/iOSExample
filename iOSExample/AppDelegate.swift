@@ -34,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           // ...notify the user.
             print("11 notify the user. didCrashDuringPreviousExecution")
         }
+
+        // disable autolayout logging
+        UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+        
         return true
     }
 

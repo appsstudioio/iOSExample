@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AppStoreID</key>
+	<string>$(APPSTORE_ID)</string>
 	<key>BaseHostURL</key>
 	<string>$(BASE_URL)</string>
 	<key>FirebaseServiceFile</key>
@@ -15,6 +17,57 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>CookieRun-Black.otf</string>
+		<string>CookieRun-Bold.otf</string>
+		<string>CookieRun-Regular.otf</string>
+		<string>DdangFontsOTF-Bold.otf</string>
+		<string>DdangFontsOTF-Light.otf</string>
+		<string>DdangFontsOTF-Medium.otf</string>
+		<string>Dongle-Bold.ttf</string>
+		<string>Dongle-Light.ttf</string>
+		<string>Dongle-Regular.ttf</string>
+		<string>Freesentation-4Regular.ttf</string>
+		<string>Freesentation-6SemiBold.ttf</string>
+		<string>Freesentation-7Bold.ttf</string>
+		<string>Gaegu-Bold.ttf</string>
+		<string>Gaegu-Light.ttf</string>
+		<string>Gaegu-Regular.ttf</string>
+		<string>GothicA1-Bold.ttf</string>
+		<string>GothicA1-Regular.ttf</string>
+		<string>GothicA1-SemiBold.ttf</string>
+		<string>Hahmlet-Bold.ttf</string>
+		<string>Hahmlet-Regular.ttf</string>
+		<string>Hahmlet-SemiBold.ttf</string>
+		<string>IBMPlexSansKR-Bold.ttf</string>
+		<string>IBMPlexSansKR-Regular.ttf</string>
+		<string>IBMPlexSansKR-SemiBold.ttf</string>
+		<string>Interop-Bold.otf</string>
+		<string>Interop-Regular.otf</string>
+		<string>Interop-SemiBold.otf</string>
+		<string>LINESeedKR-Bd.otf</string>
+		<string>LINESeedKR-Rg.otf</string>
+		<string>LINESeedKR-Th.otf</string>
+		<string>MangoDdobak-B.otf</string>
+		<string>MangoDdobak-L.otf</string>
+		<string>MangoDdobak-R.otf</string>
+		<string>MoveSans-Bold.otf</string>
+		<string>MoveSans-Light.otf</string>
+		<string>MoveSans-Medium.otf</string>
+		<string>Pretendard-Bold.otf</string>
+		<string>Pretendard-Regular.otf</string>
+		<string>Pretendard-SemiBold.otf</string>
+		<string>SCDream-Bold.otf</string>
+		<string>SCDream-Regular.otf</string>
+		<string>SCDream-SemiBold.otf</string>
+		<string>SUIT-Bold.otf</string>
+		<string>SUIT-Regular.otf</string>
+		<string>SUIT-SemiBold.otf</string>
+		<string>WantedSans-Bold.otf</string>
+		<string>WantedSans-Regular.otf</string>
+		<string>WantedSans-SemiBold.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
